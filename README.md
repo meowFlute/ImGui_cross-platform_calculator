@@ -14,6 +14,12 @@ The goals of this repo need to stay simple or I'll never get the projec to where
 ### Getting ImGui
 One reason I'm doing this in the first place is to just get my hands on ImGui for the first time.
 
+My setup is:
+- Ubuntu 22.04.2 LTS installed on an older (and worn out) Dell G3 3579
+- 32GB Ram
+- Intel i5-8300H @ 2.3GHz x 8
+- NVidia GeForce GTX 1050 Mobile
+
 There isn't a lot of information on how to use ImGui correctly. The way that I am going to after checking around is by using it as a Git submodule.
 
 After initializing my repository I just went into the folder and followed the information found in the *Starting with Submodules* portions of [this Git-SCM documentation page](https://git-scm.com/book/en/v2/Git-Tools-Submodules), which specifically meant adding the submodule by the URL 
