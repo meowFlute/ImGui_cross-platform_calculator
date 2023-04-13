@@ -22,7 +22,9 @@ My setup is:
 
 There isn't a lot of information on how to use ImGui correctly. The way that I am going to after checking around is by using it as a Git submodule.
 
-After initializing my repository I just went into the folder and followed the information found in the *Starting with Submodules* portions of [this Git-SCM documentation page](https://git-scm.com/book/en/v2/Git-Tools-Submodules), which specifically meant adding the submodule by the URL 
+After initializing my repository I just went into the folder and followed the information found in the *Starting with Submodules* portions of [this Git-SCM documentation page](https://git-scm.com/book/en/v2/Git-Tools-Submodules), which specifically meant adding the submodule by the URL. 
+
+**NOTE:** At this time, the latest release of ImGui is v1.89.4, but I enabled release notifications in github and plan on updating the release version *even if* I don't update them in the readme.
 
 ```console
 scott@scott-G3:~/ImGui_ubuntu_calculator$ git submodule add https://github.com/ocornut/imgui
