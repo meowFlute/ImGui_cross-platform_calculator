@@ -1,4 +1,5 @@
-# ImGui_cross-platform_calculator: A personal primer in cross-platform Dear ImGui development
+# ImGui_cross-platform_calculator 
+A personal primer in cross-platform Dear ImGui development
 
 ## Background 
 For a few years I have been developing in C and obtaining a fair amount of engineering and business domain expertise. I'd really like to find a way to make something a bit more user friendly than the CLI tools I've been developing for years.
