@@ -82,11 +82,18 @@ $(BUILD_DIR)/%.o:$(IMGUI_DIR)/%.cpp
 $(BUILD_DIR)/%.o:$(IMGUI_DIR)/backends/%.cpp
 	$(CXX) $(CXXFLAGS) -c -o $@ $<
 
-all: $(EXE)
+all: folders $(EXE)
+	@echo Executable $(EXE) created
 	@echo Build complete for $(ECHO_MESSAGE)
+	
+folders:
+	@echo Creating folder \"$(BUILD_DIR)\" to keep things tidy
+	@mkdir -p $(BUILD_DIR)
 
 $(EXE): $(OBJS)
 	$(CXX) -o $@ $^ $(CXXFLAGS) $(LIBS)
 
 clean:
 	rm -f $(EXE) $(OBJS)
+	@echo Removing the folder \"$(BUILD_DIR)\" 
+	rmdir $(BUILD_DIR)
