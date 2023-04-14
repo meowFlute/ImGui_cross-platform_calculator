@@ -3,7 +3,7 @@
 ## Background 
 For a few years I have been developing in C and obtaining a fair amount of engineering and business domain expertise. I'd really like to find a way to make something a bit more user friendly than the CLI tools I've been developing for years.
 
-In order to get my feet wet with a C/C++ friendly, cross-platform, and "simple" GUI I did some research and settled on trying ImGui first.
+In order to get my feet wet with a C/C++ friendly, cross-platform, and "simple" GUI I did some research and settled on trying `Dear ImGui` first.
 
 ## Repository Goals
 The goals of this repo need to stay simple or I'll never get the project to where I want it to be. I want to make a simple calculator with a minimal set of buttons. Something like this.
