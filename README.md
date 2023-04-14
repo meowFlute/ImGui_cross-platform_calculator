@@ -86,7 +86,7 @@ example_sdl2_opengl3.vcxproj.filters  imgui_impl_sdl2.o     main.cpp         REA
 scott@scott-G3:~/ImGui_ubuntu_calculator/imgui/examples/example_sdl2_opengl3$ ./example_sdl2_opengl3 &
 ```
 
-## Repository Build Setup
+## Top-level Repository Build Setup
 ### Building the example in the top-level directory
 
 Having been able to build the example in the ImGui folder, the next step on the path to making my own app is getting the same example to build at the top-level folder (baby steps!). To do so I simply copied the `main.cpp` and `Makefile` files from the project I wanted to emulate. **Note**: I renamed main.cpp, because I want to reserve that name for my actual project and leave this example as something that can easily be compiled for now.
