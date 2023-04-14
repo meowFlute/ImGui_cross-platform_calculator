@@ -14,3 +14,9 @@ This section describes:
 - doing a test build from the Dear ImGui examples
 - setting up my own repository with Git submodules
 - Modifying the example Makefile to suit my purposes
+
+## [Basic Design Planning: DESIGN.md](https://github.com/meowFlute/ImGui_ubuntu_calculator/blob/main/docs/DESIGN.md)
+
+This section describes:
+- my first look at the Dear ImGui examples
+- a rough outline of Dear ImGui objects that I'll try to utilize for the first version of the calculator
