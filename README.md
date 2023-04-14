@@ -85,3 +85,39 @@ example_sdl2_opengl3.vcxproj          imgui_impl_opengl3.o  imgui_widgets.o  Mak
 example_sdl2_opengl3.vcxproj.filters  imgui_impl_sdl2.o     main.cpp         README.md
 scott@scott-G3:~/ImGui_ubuntu_calculator/imgui/examples/example_sdl2_opengl3$ ./example_sdl2_opengl3 &
 ```
+
+## Repository Build Setup
+### Building the example in the top-level directory
+
+Having been able to build the example in the ImGui folder, the next step on the path to making my own app is getting the same example to build at the top-level folder (baby steps!). To do so I simply copied the `main.cpp` and `Makefile` files from the project I wanted to emulate. **Note**: I renamed main.cpp, because I want to reserve that name for my actual project and leave this example as something that can easily be compiled for now.
+
+```console
+scott@scott-G3:~/ImGui_ubuntu_calculator/imgui/examples/example_sdl2_opengl3$ cp ./Makefile ~/ImGui_ubuntu_calculator/Makefile
+scott@scott-G3:~/ImGui_ubuntu_calculator/imgui/examples/example_sdl2_opengl3$ cp ./main.cpp ~/ImGui_ubuntu_calculator/imgui_example.cpp
+```
+
+because of the way these Makefiles are structured, we don't have to change much. The following changes should compile out of the box
+
+```make
+IMGUI_DIR = imgui
+```
+
+Simple as that! Just change the imgui folder and the rest is already done for you!
+
+### Cleaning up the top-level directory with a "build" folder
+
+I am not a fan of having a bunch of clutter at the top-level directory after a build, so I wanted to send all of the object files to a subfolder. Git doesn't allow you to track empty folders, and this would be a folder just for temporary build files, so we'll create it if it doesn't exist and then make clean will destory it. These were the steps
+
+1. I made a `BUILD_DIR = build` variable up by the `IMGUI_DIR` variable
+2. I modified the `OBJS` variable to be `$(addprefix $(BUILD_DIR)/, $(addsuffix .o, $(basename $(notdir $(SOURCES)))))`, which adds the build folder prefix to each object file name definition
+3. I changed the object file target definitions to be
+    - `$(BUILD_DIR)/%.o:%.cpp`
+    - `$(BUILD_DIR)/%.o:$(IMGUI_DIR)/%.cpp`
+    - `$(BUILD_DIR)/%.o:$(IMGUI_DIR)/backends/%.cpp`
+4. I added a folders resource to `all:`, e.g. `all: folders $(EXE)` and then a folder creation set
+```make
+folders:
+ 	@echo Creating folder \"$(BUILD_DIR)\" to keep things tidy
+ 	@mkdir -p $(BUILD_DIR)
+```
+5. To the clean lines I added `rmdir $(BUILD_DIR)`
