@@ -20,3 +20,4 @@ This section describes:
 This section describes:
 - my first look at the Dear ImGui examples
 - a rough outline of Dear ImGui objects that I'll try to utilize for the first version of the calculator
+- a bold promise of a v1.0 release that will include binaries for Windows, Mac, and Ubuntu 
