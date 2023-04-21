@@ -6,6 +6,7 @@
 *.lo
 *.o
 *.obj
+build/*
 
 # Precompiled Headers
 *.gch
@@ -40,3 +41,6 @@ visual studio/.vs
 # Application Deliverables for Windows
 !visual studio/Release/ImGui_cross-platform_calculator.exe
 !visual studio/Release/SDL2.dll
+
+# Application Deliverables for Linux
+*.ini
