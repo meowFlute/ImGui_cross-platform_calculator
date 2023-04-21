@@ -32,8 +32,11 @@
 *.app
 example_sdl2_opengl3
 
+# Visual Studio Bloat
 visual studio/Debug
 visual studio/Release/*
 visual studio/.vs
 
+# Application Deliverables for Windows
 !visual studio/Release/ImGui_cross-platform_calculator.exe
+!visual studio/Release/SDL2.dll
