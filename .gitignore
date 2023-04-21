@@ -34,4 +34,5 @@ example_sdl2_opengl3
 
 visual studio/Debug
 visual studio/Release
+visual studio/.vs
 !visual studio/Release/ImGui_cross-platform_calculator.exe
