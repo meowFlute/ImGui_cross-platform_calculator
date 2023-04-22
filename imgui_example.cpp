@@ -115,13 +115,15 @@ int main(int, char**)
     //io.Fonts->AddFontFromFileTTF("../../misc/fonts/DroidSans.ttf", 16.0f);
     //io.Fonts->AddFontFromFileTTF("../../misc/fonts/Roboto-Medium.ttf", 16.0f);
     //io.Fonts->AddFontFromFileTTF("../../misc/fonts/Cousine-Regular.ttf", 15.0f);
-    io.Fonts->AddFontFromFileTTF("fonts/UbuntuMono-R.ttf", 18.0f);
+    ImFont* defaultFont = io.Fonts->AddFontFromFileTTF("fonts/UbuntuMono-R.ttf", 18.0f);
+    ImFont* buttonFont = io.Fonts->AddFontFromFileTTF("fonts/UbuntuMono-B.ttf", 48.0f);
     //ImFont* font = io.Fonts->AddFontFromFileTTF("c:\\Windows\\Fonts\\ArialUni.ttf", 18.0f, nullptr, io.Fonts->GetGlyphRangesJapanese());
     //IM_ASSERT(font != nullptr);
 
     // Our state
     bool show_demo_window = true;
     bool show_diagnostics_window = false;
+    bool reverse_polish = false;
     ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
 
     // Main loop
@@ -179,11 +181,48 @@ int main(int, char**)
             static char calcBuf[128] = ""; ImGui::InputText("##", calcBuf, 128, ImGuiInputTextFlags_CallbackCharFilter, TextFilters::FilterCalculatorOutput);
             ImGui::SameLine(); HelpMarker("Main input/output of the calculator. You can input numbers, spaces, and the standard operators +-*/^()");
             
+            // For buttons we'll render them in a larger font instead of default
+            ImGui::PushFont(buttonFont);
+            // Row 1 of buttons
+            if (ImGui::Button("7")){/* input to buffer */}
+            ImGui::SameLine(); if (ImGui::Button("8")){/* input to buffer */}
+            ImGui::SameLine(); if (ImGui::Button("9")){/* input to buffer */}
+            ImGui::SameLine(); if (ImGui::Button("/")){/* input to buffer */}
+            
+            // Row 2 of buttons
+            if (ImGui::Button("4")){/* input to buffer */}
+            ImGui::SameLine(); if (ImGui::Button("5")){/* input to buffer */}
+            ImGui::SameLine(); if (ImGui::Button("6")){/* input to buffer */}
+            ImGui::SameLine(); if (ImGui::Button("*")){/* input to buffer */}
+            
+            // Row 3 of buttons
+            if (ImGui::Button("1")){/* input to buffer */}
+            ImGui::SameLine(); if (ImGui::Button("2")){/* input to buffer */}
+            ImGui::SameLine(); if (ImGui::Button("3")){/* input to buffer */}
+            ImGui::SameLine(); if (ImGui::Button("-")){/* input to buffer */}
+            
+            // Row 4 of buttons
+            if (ImGui::Button("0")){/* input to buffer */}
+            ImGui::SameLine(); if (ImGui::Button(".")){/* input to buffer */}
+            ImGui::SameLine(); if (ImGui::Button("+")){/* input to buffer */}
+            ImGui::SameLine(); if (ImGui::Button("^")){/* input to buffer */}
+            // Return to default font
+            ImGui::PopFont();
+            
+            
             ImGui::Checkbox("Show Calculator Diagnostics Window", &show_diagnostics_window);
+            ImGui::SameLine(); ImGui::Checkbox("Reverse Polish Notation", &reverse_polish);
 
             if (ImGui::Button("Calculate"))
             {
-            	//TODO: actually calculate something
+            	if(reverse_polish)
+            	{
+            		// compute using reverse polish notation
+            	}
+            	else
+            	{
+					// compute normal
+				}
             }
 
             ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / io.Framerate, io.Framerate);
