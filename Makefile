@@ -14,7 +14,7 @@
 #CXX = g++
 #CXX = clang++
 
-EXE = example_sdl2_opengl3
+EXE = ImGui_cross-platform_calculator
 IMGUI_DIR = imgui
 BUILD_DIR = build
 SOURCES = imgui_example.cpp

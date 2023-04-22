@@ -31,7 +31,7 @@ build/*
 *.exe
 *.out
 *.app
-example_sdl2_opengl3
+ImGui_cross-platform_calculator
 
 # Visual Studio Bloat
 visual studio/Debug
