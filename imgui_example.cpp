@@ -37,6 +37,78 @@ static void HelpMarker(const char* desc)
     }
 }
 
+// Those light colors are better suited with a thicker font than the default one + FrameBorder
+static void StyleColorsCalculator()
+{
+    ImVec4* colors = ImGui::GetStyle().Colors;
+	colors[ImGuiCol_Text]                   = ImVec4(0.00f, 0.00f, 0.00f, 1.00f);
+	colors[ImGuiCol_TextDisabled]           = ImVec4(0.60f, 0.60f, 0.60f, 1.00f);
+	colors[ImGuiCol_WindowBg]               = ImVec4(0.86f, 0.86f, 0.86f, 1.00f);
+	colors[ImGuiCol_ChildBg]                = ImVec4(0.00f, 0.00f, 0.00f, 0.00f);
+	colors[ImGuiCol_PopupBg]                = ImVec4(1.00f, 1.00f, 1.00f, 0.98f);
+	colors[ImGuiCol_Border]                 = ImVec4(0.00f, 0.00f, 0.00f, 0.30f);
+	colors[ImGuiCol_BorderShadow]           = ImVec4(0.00f, 0.00f, 0.00f, 0.00f);
+	colors[ImGuiCol_FrameBg]                = ImVec4(1.00f, 1.00f, 1.00f, 1.00f);
+	colors[ImGuiCol_FrameBgHovered]         = ImVec4(0.26f, 0.59f, 0.98f, 0.40f);
+	colors[ImGuiCol_FrameBgActive]          = ImVec4(0.26f, 0.59f, 0.98f, 0.67f);
+	colors[ImGuiCol_TitleBg]                = ImVec4(0.96f, 0.96f, 0.96f, 1.00f);
+	colors[ImGuiCol_TitleBgActive]          = ImVec4(0.82f, 0.82f, 0.82f, 1.00f);
+	colors[ImGuiCol_TitleBgCollapsed]       = ImVec4(1.00f, 1.00f, 1.00f, 0.51f);
+	colors[ImGuiCol_MenuBarBg]              = ImVec4(0.86f, 0.86f, 0.86f, 1.00f);
+	colors[ImGuiCol_ScrollbarBg]            = ImVec4(0.98f, 0.98f, 0.98f, 0.53f);
+	colors[ImGuiCol_ScrollbarGrab]          = ImVec4(0.69f, 0.69f, 0.69f, 0.80f);
+	colors[ImGuiCol_ScrollbarGrabHovered]   = ImVec4(0.49f, 0.49f, 0.49f, 0.80f);
+	colors[ImGuiCol_ScrollbarGrabActive]    = ImVec4(0.49f, 0.49f, 0.49f, 1.00f);
+	colors[ImGuiCol_CheckMark]              = ImVec4(0.26f, 0.59f, 0.98f, 1.00f);
+	colors[ImGuiCol_SliderGrab]             = ImVec4(0.26f, 0.59f, 0.98f, 0.78f);
+	colors[ImGuiCol_SliderGrabActive]       = ImVec4(0.46f, 0.54f, 0.80f, 0.60f);
+	colors[ImGuiCol_Button]                 = ImVec4(0.26f, 0.59f, 0.98f, 0.40f);
+	colors[ImGuiCol_ButtonHovered]          = ImVec4(0.26f, 0.59f, 0.98f, 1.00f);
+	colors[ImGuiCol_ButtonActive]           = ImVec4(0.06f, 0.53f, 0.98f, 1.00f);
+	colors[ImGuiCol_Header]                 = ImVec4(0.26f, 0.59f, 0.98f, 0.31f);
+	colors[ImGuiCol_HeaderHovered]          = ImVec4(0.26f, 0.59f, 0.98f, 0.80f);
+	colors[ImGuiCol_HeaderActive]           = ImVec4(0.26f, 0.59f, 0.98f, 1.00f);
+	colors[ImGuiCol_Separator]              = ImVec4(0.39f, 0.39f, 0.39f, 0.62f);
+	colors[ImGuiCol_SeparatorHovered]       = ImVec4(0.14f, 0.44f, 0.80f, 0.78f);
+	colors[ImGuiCol_SeparatorActive]        = ImVec4(0.14f, 0.44f, 0.80f, 1.00f);
+	colors[ImGuiCol_ResizeGrip]             = ImVec4(0.35f, 0.35f, 0.35f, 0.17f);
+	colors[ImGuiCol_ResizeGripHovered]      = ImVec4(0.26f, 0.59f, 0.98f, 0.67f);
+	colors[ImGuiCol_ResizeGripActive]       = ImVec4(0.26f, 0.59f, 0.98f, 0.95f);
+	colors[ImGuiCol_Tab]                    = ImVec4(0.76f, 0.80f, 0.84f, 0.93f);
+	colors[ImGuiCol_TabHovered]             = ImVec4(0.26f, 0.59f, 0.98f, 0.80f);
+	colors[ImGuiCol_TabActive]              = ImVec4(0.60f, 0.73f, 0.88f, 1.00f);
+	colors[ImGuiCol_TabUnfocused]           = ImVec4(0.92f, 0.93f, 0.94f, 0.99f);
+	colors[ImGuiCol_TabUnfocusedActive]     = ImVec4(0.74f, 0.82f, 0.91f, 1.00f);
+	colors[ImGuiCol_PlotLines]              = ImVec4(0.39f, 0.39f, 0.39f, 1.00f);
+	colors[ImGuiCol_PlotLinesHovered]       = ImVec4(1.00f, 0.43f, 0.35f, 1.00f);
+	colors[ImGuiCol_PlotHistogram]          = ImVec4(0.90f, 0.70f, 0.00f, 1.00f);
+	colors[ImGuiCol_PlotHistogramHovered]   = ImVec4(1.00f, 0.45f, 0.00f, 1.00f);
+	colors[ImGuiCol_TableHeaderBg]          = ImVec4(0.78f, 0.87f, 0.98f, 1.00f);
+	colors[ImGuiCol_TableBorderStrong]      = ImVec4(0.57f, 0.57f, 0.64f, 1.00f);
+	colors[ImGuiCol_TableBorderLight]       = ImVec4(0.68f, 0.68f, 0.74f, 1.00f);
+	colors[ImGuiCol_TableRowBg]             = ImVec4(0.00f, 0.00f, 0.00f, 0.00f);
+	colors[ImGuiCol_TableRowBgAlt]          = ImVec4(0.30f, 0.30f, 0.30f, 0.09f);
+	colors[ImGuiCol_TextSelectedBg]         = ImVec4(0.26f, 0.59f, 0.98f, 0.35f);
+	colors[ImGuiCol_DragDropTarget]         = ImVec4(0.26f, 0.59f, 0.98f, 0.95f);
+	colors[ImGuiCol_NavHighlight]           = ImVec4(0.26f, 0.59f, 0.98f, 0.80f);
+	colors[ImGuiCol_NavWindowingHighlight]  = ImVec4(0.70f, 0.70f, 0.70f, 0.70f);
+	colors[ImGuiCol_NavWindowingDimBg]      = ImVec4(0.20f, 0.20f, 0.20f, 0.20f);
+	colors[ImGuiCol_ModalWindowDimBg]       = ImVec4(0.20f, 0.20f, 0.20f, 0.35f);
+}
+
+static void StyleRoundingCalculator()
+{
+	ImGuiStyle& style = ImGui::GetStyle();
+    style.WindowRounding = 12.0f;
+    style.TabRounding = 12.0f;
+    style.FrameRounding = 12.0f;
+    style.PopupRounding = 12.0f;
+    style.ScrollbarRounding = 12.0f;
+    style.GrabRounding = 12.0f;
+    style.TabRounding = 12.0f;
+    style.WindowRounding = 12.0f;
+}
+
 // Main code
 int main(int, char**)
 {
@@ -115,16 +187,23 @@ int main(int, char**)
     //io.Fonts->AddFontFromFileTTF("../../misc/fonts/DroidSans.ttf", 16.0f);
     //io.Fonts->AddFontFromFileTTF("../../misc/fonts/Roboto-Medium.ttf", 16.0f);
     //io.Fonts->AddFontFromFileTTF("../../misc/fonts/Cousine-Regular.ttf", 15.0f);
-    ImFont* defaultFont = io.Fonts->AddFontFromFileTTF("fonts/UbuntuMono-R.ttf", 18.0f);
-    ImFont* buttonFont = io.Fonts->AddFontFromFileTTF("fonts/UbuntuMono-B.ttf", 48.0f);
+    /*ImFont* defaultFont = */io.Fonts->AddFontFromFileTTF("fonts/UbuntuMono-R.ttf", 18.0f);
+    ImFont* buttonFont = io.Fonts->AddFontFromFileTTF("fonts/UbuntuMono-R.ttf", 36.0f);
+    ImFont* outputFont = io.Fonts->AddFontFromFileTTF("fonts/Ubuntu-R.ttf", 24.0f);
     //ImFont* font = io.Fonts->AddFontFromFileTTF("c:\\Windows\\Fonts\\ArialUni.ttf", 18.0f, nullptr, io.Fonts->GetGlyphRangesJapanese());
     //IM_ASSERT(font != nullptr);
+
+	// Set the style to our custom style
+    StyleColorsCalculator();
+    StyleRoundingCalculator();
 
     // Our state
     bool show_demo_window = true;
     bool show_diagnostics_window = false;
     bool reverse_polish = false;
     ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
+    const float BUTTON_HEIGHT = 90.0f;
+    float button_width; // to be initialized before first use
 
     // Main loop
     bool done = false;
@@ -156,7 +235,7 @@ int main(int, char**)
         ImGui_ImplOpenGL3_NewFrame();
         ImGui_ImplSDL2_NewFrame();
         ImGui::NewFrame();
-
+        
         // 1. Show the big demo window (Most of the sample code is in ImGui::ShowDemoWindow()! You can browse its code to learn more about Dear ImGui!).
         if (show_demo_window)
             ImGui::ShowDemoWindow(&show_demo_window);
@@ -178,40 +257,53 @@ int main(int, char**)
             };
 
 			// Here is out main output and keyboard input field, along with a (?) tip
-            static char calcBuf[128] = ""; ImGui::InputText("##", calcBuf, 128, ImGuiInputTextFlags_CallbackCharFilter, TextFilters::FilterCalculatorOutput);
+			ImGui::PushItemWidth(-35.0f);
+			ImGui::PushFont(outputFont);
+            static char calcBuf[128] = ""; ImGui::InputText("##CalculatorOutput", calcBuf, 128, ImGuiInputTextFlags_CallbackCharFilter, TextFilters::FilterCalculatorOutput);
+            float calc_width = ImGui::GetItemRectSize().x;
+            ImGui::PopItemWidth();
+            ImGui::PopFont();
             ImGui::SameLine(); HelpMarker("Main input/output of the calculator. You can input numbers, spaces, and the standard operators +-*/^()");
             
             // For buttons we'll render them in a larger font instead of default
             ImGui::PushFont(buttonFont);
+            
+            // Button width calculation
+            button_width = (calc_width/4.0f) - ((3.0f/4.0f) * ImGui::GetStyle().ItemSpacing.x);
+            
             // Row 1 of buttons
-            if (ImGui::Button("7")){/* input to buffer */}
-            ImGui::SameLine(); if (ImGui::Button("8")){/* input to buffer */}
-            ImGui::SameLine(); if (ImGui::Button("9")){/* input to buffer */}
-            ImGui::SameLine(); if (ImGui::Button("/")){/* input to buffer */}
+            if (ImGui::Button("7", ImVec2(button_width, BUTTON_HEIGHT))){/* input to buffer */}
+            ImGui::SameLine(); if (ImGui::Button("8", ImVec2(button_width, BUTTON_HEIGHT))){/* input to buffer */}
+            ImGui::SameLine(); if (ImGui::Button("9", ImVec2(button_width, BUTTON_HEIGHT))){/* input to buffer */}
+            ImGui::SameLine(); if (ImGui::Button("/", ImVec2(button_width, BUTTON_HEIGHT))){/* input to buffer */}
             
             // Row 2 of buttons
-            if (ImGui::Button("4")){/* input to buffer */}
-            ImGui::SameLine(); if (ImGui::Button("5")){/* input to buffer */}
-            ImGui::SameLine(); if (ImGui::Button("6")){/* input to buffer */}
-            ImGui::SameLine(); if (ImGui::Button("*")){/* input to buffer */}
+            if (ImGui::Button("4", ImVec2(button_width, BUTTON_HEIGHT))){/* input to buffer */}
+            ImGui::SameLine(); if (ImGui::Button("5", ImVec2(button_width, BUTTON_HEIGHT))){/* input to buffer */}
+            ImGui::SameLine(); if (ImGui::Button("6", ImVec2(button_width, BUTTON_HEIGHT))){/* input to buffer */}
+            ImGui::SameLine(); if (ImGui::Button("*", ImVec2(button_width, BUTTON_HEIGHT))){/* input to buffer */}
             
             // Row 3 of buttons
-            if (ImGui::Button("1")){/* input to buffer */}
-            ImGui::SameLine(); if (ImGui::Button("2")){/* input to buffer */}
-            ImGui::SameLine(); if (ImGui::Button("3")){/* input to buffer */}
-            ImGui::SameLine(); if (ImGui::Button("-")){/* input to buffer */}
+            if (ImGui::Button("1", ImVec2(button_width, BUTTON_HEIGHT))){/* input to buffer */}
+            ImGui::SameLine(); if (ImGui::Button("2", ImVec2(button_width, BUTTON_HEIGHT))){/* input to buffer */}
+            ImGui::SameLine(); if (ImGui::Button("3", ImVec2(button_width, BUTTON_HEIGHT))){/* input to buffer */}
+            ImGui::SameLine(); if (ImGui::Button("-", ImVec2(button_width, BUTTON_HEIGHT))){/* input to buffer */}
             
             // Row 4 of buttons
-            if (ImGui::Button("0")){/* input to buffer */}
-            ImGui::SameLine(); if (ImGui::Button(".")){/* input to buffer */}
-            ImGui::SameLine(); if (ImGui::Button("+")){/* input to buffer */}
-            ImGui::SameLine(); if (ImGui::Button("^")){/* input to buffer */}
+            if (ImGui::Button("0", ImVec2(button_width, BUTTON_HEIGHT))){/* input to buffer */}
+            ImGui::SameLine(); if (ImGui::Button(".", ImVec2(button_width, BUTTON_HEIGHT))){/* input to buffer */}
+            ImGui::SameLine(); if (ImGui::Button("+", ImVec2(button_width, BUTTON_HEIGHT))){/* input to buffer */}
+            ImGui::SameLine(); if (ImGui::Button("_", ImVec2(button_width, BUTTON_HEIGHT))){/* input to buffer */}
+            
             // Return to default font
             ImGui::PopFont();
             
             
             ImGui::Checkbox("Show Calculator Diagnostics Window", &show_diagnostics_window);
-            ImGui::SameLine(); ImGui::Checkbox("Reverse Polish Notation", &reverse_polish);
+            ImGui::SameLine(); HelpMarker("Checking this box will open the diagnostics window, which shows useful debug and \"under the hood\" calculation information");
+            ImGui::Checkbox("Reverse Polish Notation", &reverse_polish);
+            ImGui::SameLine(); HelpMarker("Reverse Polish Notation is a different style of calculation that handles precedence explicitly.\n\n"
+            								"3 * (2 + 7)\n\nis written instead as\n\n2 7 + 3 *\n\nfor example. Visit the wikipedia page to learn more!");
 
             if (ImGui::Button("Calculate"))
             {
@@ -224,8 +316,6 @@ int main(int, char**)
 					// compute normal
 				}
             }
-
-            ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / io.Framerate, io.Framerate);
             ImGui::End();
         }
 
