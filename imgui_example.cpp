@@ -19,6 +19,8 @@
 #include "../libs/emscripten/emscripten_mainloop_stub.h"
 #endif
 
+#define CALC_BUFFER_SIZE 128
+
 //-----------------------------------------------------------------------------
 // [SECTION] Helpers
 //-----------------------------------------------------------------------------
@@ -107,6 +109,61 @@ static void StyleRoundingCalculator()
     style.GrabRounding = 12.0f;
     style.TabRounding = 12.0f;
     style.WindowRounding = 12.0f;
+}
+
+static void  TrimTrailingWhitespace(char* s)
+{
+	char* str_end = s + strlen(s); 
+	while (str_end > s && str_end[-1] == ' ') 
+		str_end--; 
+	*str_end = 0; 
+}
+
+static int CalculatorOutputCallback(ImGuiInputTextCallbackData* data)
+{
+	int return_value = 0;
+	
+	switch (data->EventFlag)
+	{
+		case ImGuiInputTextFlags_CallbackCharFilter:
+		{
+			if (data->EventChar < 256 && strchr("0123456789.+-*/^() ", (char)data->EventChar))
+			{
+				return_value = 0;
+				break;
+			}
+			return_value = 1;
+			break;
+		}
+		// could later do other tyoes of inputs here
+	}
+	
+	return return_value;
+}
+
+static int append_char(char * buf, char c)
+{
+	int len = strlen(buf);
+	//don't forget you need a null pointer and space for the new character
+	if((len + 2) < CALC_BUFFER_SIZE)
+	{
+		buf[len] = c; //this should be the null character '\0'
+		buf[len+1] = '\0';
+	}
+	else
+	{
+		return 1; // no room left
+	}
+	return 0;
+}
+
+static void ExecCommand(char * calcBuf, char * ansBuf, bool isPolish)
+{
+	// simple history
+	// TODO: clean up whitespace and standardize/display interpreted formatted input instead of just copying it over
+	strcpy(ansBuf, calcBuf);
+	
+	// Make a tree of the operators and operands based on polish or not just like in the object-oriented C book
 }
 
 // Main code
@@ -204,6 +261,8 @@ int main(int, char**)
     ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
     const float BUTTON_HEIGHT = 90.0f;
     float button_width; // to be initialized before first use
+    static char calcBuf[CALC_BUFFER_SIZE] = ""; 
+    static char calcAnswer[CALC_BUFFER_SIZE] = "";
 
     // Main loop
     bool done = false;
@@ -245,25 +304,35 @@ int main(int, char**)
 			// Always start with a begin call
             ImGui::Begin("Calculator Output");
 
-			// Custom text filter for the calculator output window
-			struct TextFilters
-            {
-                static int FilterCalculatorOutput(ImGuiInputTextCallbackData* data)
-                {
-                    if (data->EventChar < 256 && strchr("0123456789.+-*/^() ", (char)data->EventChar))
-                        return 0;
-                    return 1;
-                }
-            };
-
 			// Here is out main output and keyboard input field, along with a (?) tip
+			// Set width and font for output
 			ImGui::PushItemWidth(-35.0f);
 			ImGui::PushFont(outputFont);
-            static char calcBuf[128] = ""; ImGui::InputText("##CalculatorOutput", calcBuf, 128, ImGuiInputTextFlags_CallbackCharFilter, TextFilters::FilterCalculatorOutput);
+			// Here we add a bunch of flags
+			ImGuiInputTextFlags input_text_flags = ImGuiInputTextFlags_EnterReturnsTrue | ImGuiInputTextFlags_EscapeClearsAll | ImGuiInputTextFlags_CallbackCharFilter;
+            bool reclaim_focus = false;
+            // Enter returns true allows you to easily act on it like this
+            if(ImGui::InputText("##CalculatorOutput", calcBuf, CALC_BUFFER_SIZE, input_text_flags, CalculatorOutputCallback))
+            {
+				char* s = calcBuf;
+		        TrimTrailingWhitespace(s); //trim trailing whitespace
+		        if (s[0]) //if not null
+		            ExecCommand(s, calcAnswer, reverse_polish); //do something
+		        strcpy(s, "");
+		        reclaim_focus = true;
+			}
+			// Auto-focus on window apparition
+		    ImGui::SetItemDefaultFocus();
+		    if (reclaim_focus)
+		        ImGui::SetKeyboardFocusHere(-1); // Auto focus previous widget
+		
             float calc_width = ImGui::GetItemRectSize().x;
             ImGui::PopItemWidth();
             ImGui::PopFont();
             ImGui::SameLine(); HelpMarker("Main input/output of the calculator. You can input numbers, spaces, and the standard operators +-*/^()");
+            
+            // answer line
+            ImGui::Text("%s",calcAnswer);
             
             // For buttons we'll render them in a larger font instead of default
             ImGui::PushFont(buttonFont);
@@ -272,28 +341,28 @@ int main(int, char**)
             button_width = (calc_width/4.0f) - ((3.0f/4.0f) * ImGui::GetStyle().ItemSpacing.x);
             
             // Row 1 of buttons
-            if (ImGui::Button("7", ImVec2(button_width, BUTTON_HEIGHT))){/* input to buffer */}
-            ImGui::SameLine(); if (ImGui::Button("8", ImVec2(button_width, BUTTON_HEIGHT))){/* input to buffer */}
-            ImGui::SameLine(); if (ImGui::Button("9", ImVec2(button_width, BUTTON_HEIGHT))){/* input to buffer */}
-            ImGui::SameLine(); if (ImGui::Button("/", ImVec2(button_width, BUTTON_HEIGHT))){/* input to buffer */}
+            if (ImGui::Button("7", ImVec2(button_width, BUTTON_HEIGHT))){append_char(calcBuf,'7');}
+            ImGui::SameLine(); if (ImGui::Button("8", ImVec2(button_width, BUTTON_HEIGHT))){append_char(calcBuf,'8');}
+            ImGui::SameLine(); if (ImGui::Button("9", ImVec2(button_width, BUTTON_HEIGHT))){append_char(calcBuf,'9');}
+            ImGui::SameLine(); if (ImGui::Button("/", ImVec2(button_width, BUTTON_HEIGHT))){append_char(calcBuf,'/');}
             
             // Row 2 of buttons
-            if (ImGui::Button("4", ImVec2(button_width, BUTTON_HEIGHT))){/* input to buffer */}
-            ImGui::SameLine(); if (ImGui::Button("5", ImVec2(button_width, BUTTON_HEIGHT))){/* input to buffer */}
-            ImGui::SameLine(); if (ImGui::Button("6", ImVec2(button_width, BUTTON_HEIGHT))){/* input to buffer */}
-            ImGui::SameLine(); if (ImGui::Button("*", ImVec2(button_width, BUTTON_HEIGHT))){/* input to buffer */}
+            if (ImGui::Button("4", ImVec2(button_width, BUTTON_HEIGHT))){append_char(calcBuf,'4');}
+            ImGui::SameLine(); if (ImGui::Button("5", ImVec2(button_width, BUTTON_HEIGHT))){append_char(calcBuf,'5');}
+            ImGui::SameLine(); if (ImGui::Button("6", ImVec2(button_width, BUTTON_HEIGHT))){append_char(calcBuf,'6');}
+            ImGui::SameLine(); if (ImGui::Button("*", ImVec2(button_width, BUTTON_HEIGHT))){append_char(calcBuf,'*');}
             
             // Row 3 of buttons
-            if (ImGui::Button("1", ImVec2(button_width, BUTTON_HEIGHT))){/* input to buffer */}
-            ImGui::SameLine(); if (ImGui::Button("2", ImVec2(button_width, BUTTON_HEIGHT))){/* input to buffer */}
-            ImGui::SameLine(); if (ImGui::Button("3", ImVec2(button_width, BUTTON_HEIGHT))){/* input to buffer */}
-            ImGui::SameLine(); if (ImGui::Button("-", ImVec2(button_width, BUTTON_HEIGHT))){/* input to buffer */}
+            if (ImGui::Button("1", ImVec2(button_width, BUTTON_HEIGHT))){append_char(calcBuf,'1');}
+            ImGui::SameLine(); if (ImGui::Button("2", ImVec2(button_width, BUTTON_HEIGHT))){append_char(calcBuf,'2');}
+            ImGui::SameLine(); if (ImGui::Button("3", ImVec2(button_width, BUTTON_HEIGHT))){append_char(calcBuf,'3');}
+            ImGui::SameLine(); if (ImGui::Button("-", ImVec2(button_width, BUTTON_HEIGHT))){append_char(calcBuf,'-');}
             
             // Row 4 of buttons
-            if (ImGui::Button("0", ImVec2(button_width, BUTTON_HEIGHT))){/* input to buffer */}
-            ImGui::SameLine(); if (ImGui::Button(".", ImVec2(button_width, BUTTON_HEIGHT))){/* input to buffer */}
-            ImGui::SameLine(); if (ImGui::Button("+", ImVec2(button_width, BUTTON_HEIGHT))){/* input to buffer */}
-            ImGui::SameLine(); if (ImGui::Button("_", ImVec2(button_width, BUTTON_HEIGHT))){/* input to buffer */}
+            if (ImGui::Button("0", ImVec2(button_width, BUTTON_HEIGHT))){append_char(calcBuf,'0');}
+            ImGui::SameLine(); if (ImGui::Button(".", ImVec2(button_width, BUTTON_HEIGHT))){append_char(calcBuf,'.');}
+            ImGui::SameLine(); if (ImGui::Button("+", ImVec2(button_width, BUTTON_HEIGHT))){append_char(calcBuf,'+');}
+            ImGui::SameLine(); if (ImGui::Button("_", ImVec2(button_width, BUTTON_HEIGHT))){append_char(calcBuf,' ');}
             
             // Return to default font
             ImGui::PopFont();
@@ -307,14 +376,11 @@ int main(int, char**)
 
             if (ImGui::Button("Calculate"))
             {
-            	if(reverse_polish)
-            	{
-            		// compute using reverse polish notation
-            	}
-            	else
-            	{
-					// compute normal
-				}
+            	char* s = calcBuf;
+		        TrimTrailingWhitespace(s); //trim trailing whitespace
+		        if (s[0]) //if not null
+		            ExecCommand(s, calcAnswer, reverse_polish); //do something
+		        strcpy(s, "");
             }
             ImGui::End();
         }
@@ -323,7 +389,8 @@ int main(int, char**)
         if (show_diagnostics_window)
         {
             ImGui::Begin("Calculator Diagnostics", &show_diagnostics_window);
-            ImGui::Text("Eventually I'll put some diagnostics about calculation here");
+            ImGui::Text("Current Calculator Output Buffer String: \"%s\"", calcBuf);
+            ImGui::Text("strlen() of Calculator Output Buffer String: %ld", strlen(calcBuf));
             if (ImGui::Button("Close"))
                 show_diagnostics_window = false;
             ImGui::End();
