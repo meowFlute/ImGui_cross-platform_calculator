@@ -1,0 +1,508 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+EXIT_SUCCESS	bison/calc.c	352;"	d	file:
+EXIT_SUCCESS	bison/calc.c	380;"	d	file:
+EXIT_SUCCESS	bison/rpcalc.c	346;"	d	file:
+EXIT_SUCCESS	bison/rpcalc.c	374;"	d	file:
+UINT_LEAST16_MAX	bison/calc.c	184;"	d	file:
+UINT_LEAST16_MAX	bison/calc.c	186;"	d	file:
+UINT_LEAST16_MAX	bison/rpcalc.c	178;"	d	file:
+UINT_LEAST16_MAX	bison/rpcalc.c	180;"	d	file:
+UINT_LEAST8_MAX	bison/calc.c	183;"	d	file:
+UINT_LEAST8_MAX	bison/calc.c	185;"	d	file:
+UINT_LEAST8_MAX	bison/rpcalc.c	177;"	d	file:
+UINT_LEAST8_MAX	bison/rpcalc.c	179;"	d	file:
+USYNERGY_IS_PACKET	imgui/examples/libs/usynergy/uSynergy.c	205;"	d	file:
+USYNERGY_IS_PACKET	imgui/examples/libs/usynergy/uSynergy.c	455;"	d	file:
+YYABORT	bison/calc.c	633;"	d	file:
+YYABORT	bison/rpcalc.c	625;"	d	file:
+YYACCEPT	bison/calc.c	632;"	d	file:
+YYACCEPT	bison/rpcalc.c	624;"	d	file:
+YYARGS_MAX	bison/calc.c	/^  enum { YYARGS_MAX = 5 };$/;"	e	enum:__anon4	file:
+YYBACKUP	bison/calc.c	640;"	d	file:
+YYBACKUP	bison/rpcalc.c	632;"	d	file:
+YYBISON	bison/calc.c	49;"	d	file:
+YYBISON	bison/rpcalc.c	49;"	d	file:
+YYBISON_VERSION	bison/calc.c	52;"	d	file:
+YYBISON_VERSION	bison/rpcalc.c	52;"	d	file:
+YYCASE_	bison/calc.c	1008;"	d	file:
+YYCASE_	bison/calc.c	997;"	d	file:
+YYCOPY	bison/calc.c	443;"	d	file:
+YYCOPY	bison/calc.c	446;"	d	file:
+YYCOPY	bison/rpcalc.c	437;"	d	file:
+YYCOPY	bison/rpcalc.c	440;"	d	file:
+YYCOPY_NEEDED	bison/calc.c	418;"	d	file:
+YYCOPY_NEEDED	bison/rpcalc.c	412;"	d	file:
+YYDPRINTF	bison/calc.c	670;"	d	file:
+YYDPRINTF	bison/calc.c	812;"	d	file:
+YYDPRINTF	bison/rpcalc.c	662;"	d	file:
+YYDPRINTF	bison/rpcalc.c	776;"	d	file:
+YYENOMEM	bison/calc.c	/^enum { YYENOMEM = -2 };$/;"	e	enum:__anon2	file:
+YYENOMEM	bison/rpcalc.c	/^enum { YYENOMEM = -2 };$/;"	e	enum:__anon1	file:
+YYERRCODE	bison/calc.c	659;"	d	file:
+YYERRCODE	bison/rpcalc.c	651;"	d	file:
+YYERROR	bison/calc.c	634;"	d	file:
+YYERROR	bison/rpcalc.c	626;"	d	file:
+YYFINAL	bison/calc.c	459;"	d	file:
+YYFINAL	bison/rpcalc.c	453;"	d	file:
+YYFPRINTF	bison/calc.c	667;"	d	file:
+YYFPRINTF	bison/rpcalc.c	659;"	d	file:
+YYFREE	bison/calc.c	390;"	d	file:
+YYFREE	bison/rpcalc.c	384;"	d	file:
+YYINITDEPTH	bison/calc.c	821;"	d	file:
+YYINITDEPTH	bison/rpcalc.c	785;"	d	file:
+YYLAST	bison/calc.c	461;"	d	file:
+YYLAST	bison/rpcalc.c	455;"	d	file:
+YYMALLOC	bison/calc.c	384;"	d	file:
+YYMALLOC	bison/rpcalc.c	378;"	d	file:
+YYMAXDEPTH	bison/calc.c	832;"	d	file:
+YYMAXDEPTH	bison/rpcalc.c	796;"	d	file:
+YYMAXUTOK	bison/calc.c	473;"	d	file:
+YYMAXUTOK	bison/rpcalc.c	467;"	d	file:
+YYNNTS	bison/calc.c	466;"	d	file:
+YYNNTS	bison/rpcalc.c	460;"	d	file:
+YYNOMEM	bison/calc.c	635;"	d	file:
+YYNOMEM	bison/rpcalc.c	627;"	d	file:
+YYNRULES	bison/calc.c	468;"	d	file:
+YYNRULES	bison/rpcalc.c	462;"	d	file:
+YYNSTATES	bison/calc.c	470;"	d	file:
+YYNSTATES	bison/rpcalc.c	464;"	d	file:
+YYNTOKENS	bison/calc.c	464;"	d	file:
+YYNTOKENS	bison/rpcalc.c	458;"	d	file:
+YYPACT_NINF	bison/calc.c	545;"	d	file:
+YYPACT_NINF	bison/rpcalc.c	542;"	d	file:
+YYPOPSTACK	bison/calc.c	1131;"	d	file:
+YYPOPSTACK	bison/rpcalc.c	874;"	d	file:
+YYPTRDIFF_MAXIMUM	bison/calc.c	214;"	d	file:
+YYPTRDIFF_MAXIMUM	bison/calc.c	220;"	d	file:
+YYPTRDIFF_MAXIMUM	bison/calc.c	223;"	d	file:
+YYPTRDIFF_MAXIMUM	bison/rpcalc.c	208;"	d	file:
+YYPTRDIFF_MAXIMUM	bison/rpcalc.c	214;"	d	file:
+YYPTRDIFF_MAXIMUM	bison/rpcalc.c	217;"	d	file:
+YYPTRDIFF_T	bison/calc.c	213;"	d	file:
+YYPTRDIFF_T	bison/calc.c	219;"	d	file:
+YYPTRDIFF_T	bison/calc.c	222;"	d	file:
+YYPTRDIFF_T	bison/rpcalc.c	207;"	d	file:
+YYPTRDIFF_T	bison/rpcalc.c	213;"	d	file:
+YYPTRDIFF_T	bison/rpcalc.c	216;"	d	file:
+YYPULL	bison/calc.c	64;"	d	file:
+YYPULL	bison/rpcalc.c	64;"	d	file:
+YYPURE	bison/calc.c	58;"	d	file:
+YYPURE	bison/rpcalc.c	58;"	d	file:
+YYPUSH	bison/calc.c	61;"	d	file:
+YYPUSH	bison/rpcalc.c	61;"	d	file:
+YYRECOVERING	bison/calc.c	638;"	d	file:
+YYRECOVERING	bison/rpcalc.c	630;"	d	file:
+YYSIZEOF	bison/calc.c	246;"	d	file:
+YYSIZEOF	bison/rpcalc.c	240;"	d	file:
+YYSIZE_MAXIMUM	bison/calc.c	240;"	d	file:
+YYSIZE_MAXIMUM	bison/rpcalc.c	234;"	d	file:
+YYSIZE_T	bison/calc.c	229;"	d	file:
+YYSIZE_T	bison/calc.c	231;"	d	file:
+YYSIZE_T	bison/calc.c	234;"	d	file:
+YYSIZE_T	bison/calc.c	236;"	d	file:
+YYSIZE_T	bison/rpcalc.c	223;"	d	file:
+YYSIZE_T	bison/rpcalc.c	225;"	d	file:
+YYSIZE_T	bison/rpcalc.c	228;"	d	file:
+YYSIZE_T	bison/rpcalc.c	230;"	d	file:
+YYSKELETON_NAME	bison/calc.c	55;"	d	file:
+YYSKELETON_NAME	bison/rpcalc.c	55;"	d	file:
+YYSTACK_ALLOC	bison/calc.c	338;"	d	file:
+YYSTACK_ALLOC	bison/calc.c	342;"	d	file:
+YYSTACK_ALLOC	bison/calc.c	347;"	d	file:
+YYSTACK_ALLOC	bison/calc.c	370;"	d	file:
+YYSTACK_ALLOC	bison/rpcalc.c	332;"	d	file:
+YYSTACK_ALLOC	bison/rpcalc.c	336;"	d	file:
+YYSTACK_ALLOC	bison/rpcalc.c	341;"	d	file:
+YYSTACK_ALLOC	bison/rpcalc.c	364;"	d	file:
+YYSTACK_ALLOC_MAXIMUM	bison/calc.c	367;"	d	file:
+YYSTACK_ALLOC_MAXIMUM	bison/calc.c	373;"	d	file:
+YYSTACK_ALLOC_MAXIMUM	bison/rpcalc.c	361;"	d	file:
+YYSTACK_ALLOC_MAXIMUM	bison/rpcalc.c	367;"	d	file:
+YYSTACK_BYTES	bison/calc.c	414;"	d	file:
+YYSTACK_BYTES	bison/rpcalc.c	408;"	d	file:
+YYSTACK_FREE	bison/calc.c	361;"	d	file:
+YYSTACK_FREE	bison/calc.c	371;"	d	file:
+YYSTACK_FREE	bison/rpcalc.c	355;"	d	file:
+YYSTACK_FREE	bison/rpcalc.c	365;"	d	file:
+YYSTACK_GAP_MAXIMUM	bison/calc.c	410;"	d	file:
+YYSTACK_GAP_MAXIMUM	bison/rpcalc.c	404;"	d	file:
+YYSTACK_RELOCATE	bison/calc.c	425;"	d	file:
+YYSTACK_RELOCATE	bison/rpcalc.c	419;"	d	file:
+YYSTYPE	bison/calc.c	80;"	d	file:
+YYSTYPE	bison/rpcalc.c	67;"	d	file:
+YYSYMBOL_10_	bison/calc.c	/^  YYSYMBOL_10_ = 10,                       \/* ')'  *\/$/;"	e	enum:yysymbol_kind_t	file:
+YYSYMBOL_10_n_	bison/rpcalc.c	/^  YYSYMBOL_10_n_ = 10,                     \/* 'n'  *\/$/;"	e	enum:yysymbol_kind_t	file:
+YYSYMBOL_4_n_	bison/calc.c	/^  YYSYMBOL_4_n_ = 4,                       \/* '\\n'  *\/$/;"	e	enum:yysymbol_kind_t	file:
+YYSYMBOL_4_n_	bison/rpcalc.c	/^  YYSYMBOL_4_n_ = 4,                       \/* '\\n'  *\/$/;"	e	enum:yysymbol_kind_t	file:
+YYSYMBOL_5_	bison/calc.c	/^  YYSYMBOL_5_ = 5,                         \/* '+'  *\/$/;"	e	enum:yysymbol_kind_t	file:
+YYSYMBOL_5_	bison/rpcalc.c	/^  YYSYMBOL_5_ = 5,                         \/* '+'  *\/$/;"	e	enum:yysymbol_kind_t	file:
+YYSYMBOL_6_	bison/calc.c	/^  YYSYMBOL_6_ = 6,                         \/* '-'  *\/$/;"	e	enum:yysymbol_kind_t	file:
+YYSYMBOL_6_	bison/rpcalc.c	/^  YYSYMBOL_6_ = 6,                         \/* '-'  *\/$/;"	e	enum:yysymbol_kind_t	file:
+YYSYMBOL_7_	bison/calc.c	/^  YYSYMBOL_7_ = 7,                         \/* '*'  *\/$/;"	e	enum:yysymbol_kind_t	file:
+YYSYMBOL_7_	bison/rpcalc.c	/^  YYSYMBOL_7_ = 7,                         \/* '*'  *\/$/;"	e	enum:yysymbol_kind_t	file:
+YYSYMBOL_8_	bison/calc.c	/^  YYSYMBOL_8_ = 8,                         \/* '\/'  *\/$/;"	e	enum:yysymbol_kind_t	file:
+YYSYMBOL_8_	bison/rpcalc.c	/^  YYSYMBOL_8_ = 8,                         \/* '\/'  *\/$/;"	e	enum:yysymbol_kind_t	file:
+YYSYMBOL_9_	bison/calc.c	/^  YYSYMBOL_9_ = 9,                         \/* '('  *\/$/;"	e	enum:yysymbol_kind_t	file:
+YYSYMBOL_9_	bison/rpcalc.c	/^  YYSYMBOL_9_ = 9,                         \/* '^'  *\/$/;"	e	enum:yysymbol_kind_t	file:
+YYSYMBOL_CALCNUM	bison/calc.c	/^  YYSYMBOL_CALCNUM = 3,                    \/* "number"  *\/$/;"	e	enum:yysymbol_kind_t	file:
+YYSYMBOL_RPCALCNUM	bison/rpcalc.c	/^  YYSYMBOL_RPCALCNUM = 3,                  \/* RPCALCNUM  *\/$/;"	e	enum:yysymbol_kind_t	file:
+YYSYMBOL_YYACCEPT	bison/calc.c	/^  YYSYMBOL_YYACCEPT = 11,                  \/* $accept  *\/$/;"	e	enum:yysymbol_kind_t	file:
+YYSYMBOL_YYACCEPT	bison/rpcalc.c	/^  YYSYMBOL_YYACCEPT = 11,                  \/* $accept  *\/$/;"	e	enum:yysymbol_kind_t	file:
+YYSYMBOL_YYEMPTY	bison/calc.c	/^  YYSYMBOL_YYEMPTY = -2,$/;"	e	enum:yysymbol_kind_t	file:
+YYSYMBOL_YYEMPTY	bison/rpcalc.c	/^  YYSYMBOL_YYEMPTY = -2,$/;"	e	enum:yysymbol_kind_t	file:
+YYSYMBOL_YYEOF	bison/calc.c	/^  YYSYMBOL_YYEOF = 0,                      \/* "end of file"  *\/$/;"	e	enum:yysymbol_kind_t	file:
+YYSYMBOL_YYEOF	bison/rpcalc.c	/^  YYSYMBOL_YYEOF = 0,                      \/* "end of file"  *\/$/;"	e	enum:yysymbol_kind_t	file:
+YYSYMBOL_YYUNDEF	bison/calc.c	/^  YYSYMBOL_YYUNDEF = 2,                    \/* "invalid token"  *\/$/;"	e	enum:yysymbol_kind_t	file:
+YYSYMBOL_YYUNDEF	bison/rpcalc.c	/^  YYSYMBOL_YYUNDEF = 2,                    \/* "invalid token"  *\/$/;"	e	enum:yysymbol_kind_t	file:
+YYSYMBOL_YYerror	bison/calc.c	/^  YYSYMBOL_YYerror = 1,                    \/* error  *\/$/;"	e	enum:yysymbol_kind_t	file:
+YYSYMBOL_YYerror	bison/rpcalc.c	/^  YYSYMBOL_YYerror = 1,                    \/* error  *\/$/;"	e	enum:yysymbol_kind_t	file:
+YYSYMBOL_exp	bison/rpcalc.c	/^  YYSYMBOL_exp = 14                        \/* exp  *\/$/;"	e	enum:yysymbol_kind_t	file:
+YYSYMBOL_expr	bison/calc.c	/^  YYSYMBOL_expr = 14,                      \/* expr  *\/$/;"	e	enum:yysymbol_kind_t	file:
+YYSYMBOL_fact	bison/calc.c	/^  YYSYMBOL_fact = 16                       \/* fact  *\/$/;"	e	enum:yysymbol_kind_t	file:
+YYSYMBOL_input	bison/calc.c	/^  YYSYMBOL_input = 12,                     \/* input  *\/$/;"	e	enum:yysymbol_kind_t	file:
+YYSYMBOL_input	bison/rpcalc.c	/^  YYSYMBOL_input = 12,                     \/* input  *\/$/;"	e	enum:yysymbol_kind_t	file:
+YYSYMBOL_line	bison/calc.c	/^  YYSYMBOL_line = 13,                      \/* line  *\/$/;"	e	enum:yysymbol_kind_t	file:
+YYSYMBOL_line	bison/rpcalc.c	/^  YYSYMBOL_line = 13,                      \/* line  *\/$/;"	e	enum:yysymbol_kind_t	file:
+YYSYMBOL_term	bison/calc.c	/^  YYSYMBOL_term = 15,                      \/* term  *\/$/;"	e	enum:yysymbol_kind_t	file:
+YYTABLE_NINF	bison/calc.c	550;"	d	file:
+YYTABLE_NINF	bison/rpcalc.c	547;"	d	file:
+YYTRANSLATE	bison/calc.c	478;"	d	file:
+YYTRANSLATE	bison/rpcalc.c	472;"	d	file:
+YY_	bison/calc.c	259;"	d	file:
+YY_	bison/calc.c	263;"	d	file:
+YY_	bison/rpcalc.c	253;"	d	file:
+YY_	bison/rpcalc.c	257;"	d	file:
+YY_ACCESSING_SYMBOL	bison/calc.c	525;"	d	file:
+YY_ACCESSING_SYMBOL	bison/rpcalc.c	519;"	d	file:
+YY_ASSERT	bison/calc.c	329;"	d	file:
+YY_ASSERT	bison/rpcalc.c	323;"	d	file:
+YY_ATTRIBUTE_PURE	bison/calc.c	270;"	d	file:
+YY_ATTRIBUTE_PURE	bison/calc.c	272;"	d	file:
+YY_ATTRIBUTE_PURE	bison/rpcalc.c	264;"	d	file:
+YY_ATTRIBUTE_PURE	bison/rpcalc.c	266;"	d	file:
+YY_ATTRIBUTE_UNUSED	bison/calc.c	278;"	d	file:
+YY_ATTRIBUTE_UNUSED	bison/calc.c	280;"	d	file:
+YY_ATTRIBUTE_UNUSED	bison/rpcalc.c	272;"	d	file:
+YY_ATTRIBUTE_UNUSED	bison/rpcalc.c	274;"	d	file:
+YY_CAST	bison/calc.c	93;"	d	file:
+YY_CAST	bison/calc.c	96;"	d	file:
+YY_CAST	bison/rpcalc.c	89;"	d	file:
+YY_CAST	bison/rpcalc.c	92;"	d	file:
+YY_IGNORE_MAYBE_UNINITIALIZED_BEGIN	bison/calc.c	294;"	d	file:
+YY_IGNORE_MAYBE_UNINITIALIZED_BEGIN	bison/calc.c	298;"	d	file:
+YY_IGNORE_MAYBE_UNINITIALIZED_BEGIN	bison/calc.c	309;"	d	file:
+YY_IGNORE_MAYBE_UNINITIALIZED_BEGIN	bison/rpcalc.c	288;"	d	file:
+YY_IGNORE_MAYBE_UNINITIALIZED_BEGIN	bison/rpcalc.c	292;"	d	file:
+YY_IGNORE_MAYBE_UNINITIALIZED_BEGIN	bison/rpcalc.c	303;"	d	file:
+YY_IGNORE_MAYBE_UNINITIALIZED_END	bison/calc.c	303;"	d	file:
+YY_IGNORE_MAYBE_UNINITIALIZED_END	bison/calc.c	310;"	d	file:
+YY_IGNORE_MAYBE_UNINITIALIZED_END	bison/rpcalc.c	297;"	d	file:
+YY_IGNORE_MAYBE_UNINITIALIZED_END	bison/rpcalc.c	304;"	d	file:
+YY_IGNORE_USELESS_CAST_BEGIN	bison/calc.c	317;"	d	file:
+YY_IGNORE_USELESS_CAST_BEGIN	bison/calc.c	324;"	d	file:
+YY_IGNORE_USELESS_CAST_BEGIN	bison/rpcalc.c	311;"	d	file:
+YY_IGNORE_USELESS_CAST_BEGIN	bison/rpcalc.c	318;"	d	file:
+YY_IGNORE_USELESS_CAST_END	bison/calc.c	320;"	d	file:
+YY_IGNORE_USELESS_CAST_END	bison/calc.c	325;"	d	file:
+YY_IGNORE_USELESS_CAST_END	bison/rpcalc.c	314;"	d	file:
+YY_IGNORE_USELESS_CAST_END	bison/rpcalc.c	319;"	d	file:
+YY_INITIAL_VALUE	bison/calc.c	306;"	d	file:
+YY_INITIAL_VALUE	bison/calc.c	313;"	d	file:
+YY_INITIAL_VALUE	bison/rpcalc.c	300;"	d	file:
+YY_INITIAL_VALUE	bison/rpcalc.c	307;"	d	file:
+YY_NULLPTR	bison/calc.c	103;"	d	file:
+YY_NULLPTR	bison/calc.c	105;"	d	file:
+YY_NULLPTR	bison/calc.c	108;"	d	file:
+YY_NULLPTR	bison/rpcalc.c	101;"	d	file:
+YY_NULLPTR	bison/rpcalc.c	104;"	d	file:
+YY_NULLPTR	bison/rpcalc.c	99;"	d	file:
+YY_REDUCE_PRINT	bison/calc.c	802;"	d	file:
+YY_REDUCE_PRINT	bison/calc.c	815;"	d	file:
+YY_REDUCE_PRINT	bison/rpcalc.c	766;"	d	file:
+YY_REDUCE_PRINT	bison/rpcalc.c	779;"	d	file:
+YY_REINTERPRET_CAST	bison/calc.c	94;"	d	file:
+YY_REINTERPRET_CAST	bison/calc.c	97;"	d	file:
+YY_REINTERPRET_CAST	bison/rpcalc.c	90;"	d	file:
+YY_REINTERPRET_CAST	bison/rpcalc.c	93;"	d	file:
+YY_STACK_PRINT	bison/calc.c	/^  YY_STACK_PRINT (yyss, yyssp);$/;"	p	file:
+YY_STACK_PRINT	bison/calc.c	771;"	d	file:
+YY_STACK_PRINT	bison/calc.c	814;"	d	file:
+YY_STACK_PRINT	bison/rpcalc.c	/^  YY_STACK_PRINT (yyss, yyssp);$/;"	p	file:
+YY_STACK_PRINT	bison/rpcalc.c	735;"	d	file:
+YY_STACK_PRINT	bison/rpcalc.c	778;"	d	file:
+YY_STDINT_H	bison/calc.c	152;"	d	file:
+YY_STDINT_H	bison/rpcalc.c	146;"	d	file:
+YY_SYMBOL_PRINT	bison/calc.c	679;"	d	file:
+YY_SYMBOL_PRINT	bison/calc.c	813;"	d	file:
+YY_SYMBOL_PRINT	bison/rpcalc.c	671;"	d	file:
+YY_SYMBOL_PRINT	bison/rpcalc.c	777;"	d	file:
+YY_USE	bison/calc.c	/^  YY_USE (yykind);$/;"	p	file:
+YY_USE	bison/calc.c	286;"	d	file:
+YY_USE	bison/calc.c	288;"	d	file:
+YY_USE	bison/rpcalc.c	/^  YY_USE (yykind);$/;"	p	file:
+YY_USE	bison/rpcalc.c	280;"	d	file:
+YY_USE	bison/rpcalc.c	282;"	d	file:
+alloca	bison/calc.c	345;"	d	file:
+alloca	bison/rpcalc.c	339;"	d	file:
+body_len	imgui/examples/libs/usynergy/uSynergy.c	/^	uint32_t	body_len	= reply_len - 4;											\/* Size of body *\/$/;"	l
+btn	imgui/examples/libs/usynergy/uSynergy.c	/^		char btn = message[8]-1;$/;"	l
+buffer	imgui/examples/libs/usynergy/uSynergy.c	/^			char buffer[256+1];$/;"	l
+buffer	imgui/examples/libs/usynergy/uSynergy.c	/^		char buffer[128];$/;"	l
+buffer	imgui/examples/libs/usynergy/uSynergy.c	/^		char buffer[64];$/;"	l
+buffer_left	imgui/examples/libs/usynergy/uSynergy.c	/^			int buffer_left = packlen - num_received;$/;"	l
+c	bison/calc.c	/^  int c;$/;"	l
+c	bison/rpcalc.c	/^  int c = getc(input_stream);$/;"	l
+calcyyerror	bison/calc.c	/^  void calcyyerror (FILE *, FILE *, char const *);$/;"	p	file:
+calcyyerror	bison/calc.c	/^calcyyerror (FILE * input_stream, FILE * output_stream, char const *s)$/;"	f
+calcyylex	bison/calc.c	/^  int calcyylex (FILE *, FILE *);$/;"	p	file:
+calcyylex	bison/calc.c	/^calcyylex (FILE * input_stream, FILE * output_stream)$/;"	f
+cur_time	imgui/examples/libs/usynergy/uSynergy.c	/^		uint32_t cur_time = context->m_getTimeFunc();$/;"	l
+ditch_received	imgui/examples/libs/usynergy/uSynergy.c	/^			int ditch_received = 0;$/;"	l
+format	imgui/examples/libs/usynergy/uSynergy.c	/^			uint32_t format	= sNetToNative32(parse_msg);$/;"	l
+free	bison/calc.c	/^void free (void *); \/* INFRINGES ON USER NAME SPACE *\/$/;"	p	file:
+free	bison/rpcalc.c	/^void free (void *); \/* INFRINGES ON USER NAME SPACE *\/$/;"	p	file:
+joy_num	imgui/examples/libs/usynergy/uSynergy.c	/^		uint8_t	joy_num = message[8];$/;"	l
+key	imgui/examples/libs/usynergy/uSynergy.c	/^		uint16_t key = sNetToNative16(message+12);$/;"	l
+key	imgui/examples/libs/usynergy/uSynergy.c	/^		uint16_t key = sNetToNative16(message+14);$/;"	l
+len	imgui/examples/libs/usynergy/uSynergy.c	/^	size_t len = strlen(string);$/;"	l
+malloc	bison/calc.c	/^void *malloc (YYSIZE_T); \/* INFRINGES ON USER NAME SPACE *\/$/;"	p	file:
+malloc	bison/rpcalc.c	/^void *malloc (YYSIZE_T); \/* INFRINGES ON USER NAME SPACE *\/$/;"	p	file:
+max_length	imgui/examples/libs/usynergy/uSynergy.c	/^	uint32_t max_length = USYNERGY_REPLY_BUFFER_SIZE - overhead_size;$/;"	l
+mod	imgui/examples/libs/usynergy/uSynergy.c	/^		uint16_t mod = sNetToNative16(message+10);$/;"	l
+num_formats	imgui/examples/libs/usynergy/uSynergy.c	/^		uint32_t		num_formats = sNetToNative32(parse_msg);$/;"	l
+num_received	imgui/examples/libs/usynergy/uSynergy.c	/^	int num_received = 0;$/;"	l
+overhead_size	imgui/examples/libs/usynergy/uSynergy.c	/^	uint32_t overhead_size =	4 +					\/* Message size *\/$/;"	l
+packlen	imgui/examples/libs/usynergy/uSynergy.c	/^	int packlen = 0;$/;"	l
+parse_msg	imgui/examples/libs/usynergy/uSynergy.c	/^		const uint8_t *	parse_msg	= message+17;$/;"	l
+receive_size	imgui/examples/libs/usynergy/uSynergy.c	/^	int receive_size = USYNERGY_RECEIVE_BUFFER_SIZE - context->m_receiveOfs;$/;"	l
+reply	imgui/examples/libs/usynergy/uSynergy.c	/^	uint8_t *reply = context->m_replyCur;$/;"	l
+reply_buf	imgui/examples/libs/usynergy/uSynergy.c	/^	uint8_t		*reply_buf	= context->m_replyBuffer;$/;"	l
+reply_len	imgui/examples/libs/usynergy/uSynergy.c	/^	uint32_t	reply_len	= (uint32_t)(context->m_replyCur - reply_buf);				\/* Total size of reply *\/$/;"	l
+ret	imgui/examples/libs/usynergy/uSynergy.c	/^	uSynergyBool ret;$/;"	l
+rpcalcyyerror	bison/rpcalc.c	/^  void rpcalcyyerror (FILE *, FILE *, char const *);$/;"	p	file:
+rpcalcyyerror	bison/rpcalc.c	/^rpcalcyyerror (FILE * input_stream, FILE * output_stream, char const *s)$/;"	f
+rpcalcyylex	bison/rpcalc.c	/^  int rpcalcyylex (FILE *, FILE *);$/;"	p	file:
+rpcalcyylex	bison/rpcalc.c	/^int rpcalcyylex (FILE * input_stream, FILE * output_stream)$/;"	f
+sAddString	imgui/examples/libs/usynergy/uSynergy.c	/^static void sAddString(uSynergyContext *context, const char *string)$/;"	f	file:
+sAddUInt16	imgui/examples/libs/usynergy/uSynergy.c	/^static void sAddUInt16(uSynergyContext *context, uint16_t value)$/;"	f	file:
+sAddUInt32	imgui/examples/libs/usynergy/uSynergy.c	/^static void sAddUInt32(uSynergyContext *context, uint32_t value)$/;"	f	file:
+sAddUInt8	imgui/examples/libs/usynergy/uSynergy.c	/^static void sAddUInt8(uSynergyContext *context, uint8_t value)$/;"	f	file:
+sNetToNative16	imgui/examples/libs/usynergy/uSynergy.c	/^static int16_t sNetToNative16(const unsigned char *value)$/;"	f	file:
+sNetToNative32	imgui/examples/libs/usynergy/uSynergy.c	/^static int32_t sNetToNative32(const unsigned char *value)$/;"	f	file:
+sProcessMessage	imgui/examples/libs/usynergy/uSynergy.c	/^static void sProcessMessage(uSynergyContext *context, const uint8_t *message)$/;"	f	file:
+sSendJoystickCallback	imgui/examples/libs/usynergy/uSynergy.c	/^static void sSendJoystickCallback(uSynergyContext *context, uint8_t joyNum)$/;"	f	file:
+sSendKeyboardCallback	imgui/examples/libs/usynergy/uSynergy.c	/^static void sSendKeyboardCallback(uSynergyContext *context, uint16_t key, uint16_t modifiers, uSynergyBool down, uSynergyBool repeat)$/;"	f	file:
+sSendMouseCallback	imgui/examples/libs/usynergy/uSynergy.c	/^static void sSendMouseCallback(uSynergyContext *context)$/;"	f	file:
+sSendReply	imgui/examples/libs/usynergy/uSynergy.c	/^static uSynergyBool sSendReply(uSynergyContext *context)$/;"	f	file:
+sSetDisconnected	imgui/examples/libs/usynergy/uSynergy.c	/^static void sSetDisconnected(uSynergyContext *context)$/;"	f	file:
+sTrace	imgui/examples/libs/usynergy/uSynergy.c	/^static void sTrace(uSynergyContext *context, const char* text)$/;"	f	file:
+sUpdateContext	imgui/examples/libs/usynergy/uSynergy.c	/^static void sUpdateContext(uSynergyContext *context)$/;"	f	file:
+short	bison/calc.c	141;"	d	file:
+short	bison/rpcalc.c	135;"	d	file:
+size	imgui/examples/libs/usynergy/uSynergy.c	/^			uint32_t size	= sNetToNative32(parse_msg+4);$/;"	l
+sticks	imgui/examples/libs/usynergy/uSynergy.c	/^	int8_t *sticks;$/;"	l
+text_length	imgui/examples/libs/usynergy/uSynergy.c	/^	uint32_t text_length = (uint32_t)strlen(text);$/;"	l
+to_receive	imgui/examples/libs/usynergy/uSynergy.c	/^			int to_receive = buffer_left < USYNERGY_RECEIVE_BUFFER_SIZE ? buffer_left : USYNERGY_RECEIVE_BUFFER_SIZE;$/;"	l
+uSynergyInit	imgui/examples/libs/usynergy/uSynergy.c	/^void uSynergyInit(uSynergyContext *context)$/;"	f
+uSynergySendClipboard	imgui/examples/libs/usynergy/uSynergy.c	/^void uSynergySendClipboard(uSynergyContext *context, const char *text)$/;"	f
+uSynergyUpdate	imgui/examples/libs/usynergy/uSynergy.c	/^void uSynergyUpdate(uSynergyContext *context)$/;"	f
+warp	imgui/examples/libs/usynergy/uSynergy.c	/^		uint16_t x = 0, y = 0, warp = 0;$/;"	l
+x	imgui/examples/libs/usynergy/uSynergy.c	/^		uint16_t x = 0, y = 0, warp = 0;$/;"	l
+y	imgui/examples/libs/usynergy/uSynergy.c	/^		uint16_t x = 0, y = 0, warp = 0;$/;"	l
+yy_reduce_print	bison/calc.c	/^yy_reduce_print (yy_state_t *yyssp, YYSTYPE *yyvsp,$/;"	f	file:
+yy_reduce_print	bison/rpcalc.c	/^yy_reduce_print (yy_state_t *yyssp, YYSTYPE *yyvsp,$/;"	f	file:
+yy_sname	bison/calc.c	/^  static const char *const yy_sname[] =$/;"	l	file:
+yy_stack_print	bison/calc.c	/^yy_stack_print (yy_state_t *yybottom, yy_state_t *yytop)$/;"	f	file:
+yy_stack_print	bison/rpcalc.c	/^yy_stack_print (yy_state_t *yybottom, yy_state_t *yytop)$/;"	f	file:
+yy_state_fast_t	bison/calc.c	/^typedef int yy_state_fast_t;$/;"	t	file:
+yy_state_fast_t	bison/rpcalc.c	/^typedef int yy_state_fast_t;$/;"	t	file:
+yy_state_t	bison/calc.c	/^typedef yytype_int8 yy_state_t;$/;"	t	file:
+yy_state_t	bison/rpcalc.c	/^typedef yytype_int8 yy_state_t;$/;"	t	file:
+yy_symbol_print	bison/calc.c	/^yy_symbol_print (FILE *yyo,$/;"	f	file:
+yy_symbol_print	bison/rpcalc.c	/^yy_symbol_print (FILE *yyo,$/;"	f	file:
+yy_symbol_value_print	bison/calc.c	/^yy_symbol_value_print (FILE *yyo,$/;"	f	file:
+yy_symbol_value_print	bison/rpcalc.c	/^yy_symbol_value_print (FILE *yyo,$/;"	f	file:
+yy_syntax_error_arguments	bison/calc.c	/^yy_syntax_error_arguments (const yypcontext_t *yyctx,$/;"	f	file:
+yyalloc	bison/calc.c	/^union yyalloc$/;"	u	file:
+yyalloc	bison/rpcalc.c	/^union yyalloc$/;"	u	file:
+yyarg	bison/calc.c	/^  yysymbol_kind_t yyarg[YYARGS_MAX];$/;"	l
+yybot	bison/calc.c	/^      int yybot = *yybottom;$/;"	l
+yybot	bison/rpcalc.c	/^      int yybot = *yybottom;$/;"	l
+yychar	bison/calc.c	/^  yychar = CALCYYEMPTY;$/;"	l
+yychar	bison/calc.c	/^int yychar;$/;"	v
+yychar	bison/calc.c	88;"	d	file:
+yychar	bison/rpcalc.c	/^  yychar = RPCALCYYEMPTY;$/;"	l
+yychar	bison/rpcalc.c	/^int yychar;$/;"	v
+yychar	bison/rpcalc.c	75;"	d	file:
+yycheck	bison/calc.c	/^static const yytype_int8 yycheck[] =$/;"	v	file:
+yycheck	bison/rpcalc.c	/^static const yytype_int8 yycheck[] =$/;"	v	file:
+yychecklim	bison/calc.c	/^      int yychecklim = YYLAST - yyn + 1;$/;"	l
+yyclearin	bison/calc.c	630;"	d	file:
+yyclearin	bison/rpcalc.c	622;"	d	file:
+yycount	bison/calc.c	/^  int yycount = 0;$/;"	l
+yycount	bison/calc.c	/^  int yycount = yy_syntax_error_arguments (yyctx, yyarg, YYARGS_MAX);$/;"	l
+yyctx	bison/calc.c	/^        yypcontext_t yyctx$/;"	l
+yyd	bison/calc.c	/^  char *yyd = yydest;$/;"	l
+yydebug	bison/calc.c	/^int yydebug;$/;"	v
+yydebug	bison/calc.c	85;"	d	file:
+yydebug	bison/rpcalc.c	/^int yydebug;$/;"	v
+yydebug	bison/rpcalc.c	72;"	d	file:
+yydefact	bison/calc.c	/^static const yytype_int8 yydefact[] =$/;"	v	file:
+yydefact	bison/rpcalc.c	/^static const yytype_int8 yydefact[] =$/;"	v	file:
+yydefgoto	bison/calc.c	/^static const yytype_int8 yydefgoto[] =$/;"	v	file:
+yydefgoto	bison/rpcalc.c	/^static const yytype_int8 yydefgoto[] =$/;"	v	file:
+yydestruct	bison/calc.c	/^yydestruct (const char *yymsg,$/;"	f	file:
+yydestruct	bison/rpcalc.c	/^yydestruct (const char *yymsg,$/;"	f	file:
+yyerrok	bison/calc.c	629;"	d	file:
+yyerrok	bison/rpcalc.c	621;"	d	file:
+yyerror	bison/calc.c	84;"	d	file:
+yyerror	bison/rpcalc.c	71;"	d	file:
+yyerrstatus	bison/calc.c	/^    int yyerrstatus = 0;$/;"	l
+yyerrstatus	bison/rpcalc.c	/^    int yyerrstatus = 0;$/;"	l
+yyformat	bison/calc.c	/^  const char *yyformat = YY_NULLPTR;$/;"	l
+yyi	bison/calc.c	/^    const int yyi = yypgoto[yylhs] + *yyssp;$/;"	l
+yyi	bison/calc.c	/^    int yyi = 0;$/;"	l
+yyi	bison/calc.c	/^    int yyi;$/;"	l
+yyi	bison/calc.c	/^  int yyi;$/;"	l
+yyi	bison/rpcalc.c	/^    const int yyi = yypgoto[yylhs] + *yyssp;$/;"	l
+yyi	bison/rpcalc.c	/^  int yyi;$/;"	l
+yylen	bison/calc.c	/^  YYPTRDIFF_T yylen;$/;"	l
+yylen	bison/calc.c	/^  int yylen = 0;$/;"	l
+yylen	bison/rpcalc.c	/^  int yylen = 0;$/;"	l
+yylex	bison/calc.c	83;"	d	file:
+yylex	bison/rpcalc.c	70;"	d	file:
+yylhs	bison/calc.c	/^    const int yylhs = yyr1[yyn] - YYNTOKENS;$/;"	l
+yylhs	bison/rpcalc.c	/^    const int yylhs = yyr1[yyn] - YYNTOKENS;$/;"	l
+yylno	bison/calc.c	/^  int yylno = yyrline[yyrule];$/;"	l
+yylno	bison/rpcalc.c	/^  int yylno = yyrline[yyrule];$/;"	l
+yylval	bison/calc.c	/^YYSTYPE yylval;$/;"	v
+yylval	bison/calc.c	87;"	d	file:
+yylval	bison/rpcalc.c	/^YYSTYPE yylval;$/;"	v
+yylval	bison/rpcalc.c	74;"	d	file:
+yymsg	bison/calc.c	/^  char *yymsg = yymsgbuf;$/;"	l
+yymsg_alloc	bison/calc.c	/^  YYPTRDIFF_T yymsg_alloc = sizeof yymsgbuf;$/;"	l
+yymsgbuf	bison/calc.c	/^  char yymsgbuf[128];$/;"	l
+yymsgp	bison/calc.c	/^        char const *yymsgp = YY_("syntax error");$/;"	l
+yyn	bison/calc.c	/^      int yyn;$/;"	l
+yyn	bison/calc.c	/^  int yyn = yypact[+*yyctx->yyssp];$/;"	l
+yyn	bison/calc.c	/^  int yyn;$/;"	l
+yyn	bison/rpcalc.c	/^  int yyn;$/;"	l
+yynerrs	bison/calc.c	/^int yynerrs;$/;"	v
+yynerrs	bison/calc.c	86;"	d	file:
+yynerrs	bison/rpcalc.c	/^int yynerrs;$/;"	v
+yynerrs	bison/rpcalc.c	73;"	d	file:
+yynrhs	bison/calc.c	/^  int yynrhs = yyr2[yyrule];$/;"	l
+yynrhs	bison/rpcalc.c	/^  int yynrhs = yyr2[yyrule];$/;"	l
+yyoutput	bison/calc.c	/^  FILE *yyoutput = yyo;$/;"	l
+yyoutput	bison/rpcalc.c	/^  FILE *yyoutput = yyo;$/;"	l
+yyp	bison/calc.c	/^    char *yyp = *yymsg;$/;"	l
+yypact	bison/calc.c	/^static const yytype_int8 yypact[] =$/;"	v	file:
+yypact	bison/rpcalc.c	/^static const yytype_int8 yypact[] =$/;"	v	file:
+yypact_value_is_default	bison/calc.c	547;"	d	file:
+yypact_value_is_default	bison/rpcalc.c	544;"	d	file:
+yyparse	bison/calc.c	/^yyparse (FILE * input_stream, FILE * output_stream)$/;"	f
+yyparse	bison/calc.c	82;"	d	file:
+yyparse	bison/rpcalc.c	/^yyparse (FILE * input_stream, FILE * output_stream)$/;"	f
+yyparse	bison/rpcalc.c	69;"	d	file:
+yypcontext_expected_tokens	bison/calc.c	/^yypcontext_expected_tokens (const yypcontext_t *yyctx,$/;"	f	file:
+yypcontext_t	bison/calc.c	/^} yypcontext_t;$/;"	t	typeref:struct:__anon3	file:
+yypgoto	bison/calc.c	/^static const yytype_int8 yypgoto[] =$/;"	v	file:
+yypgoto	bison/rpcalc.c	/^static const yytype_int8 yypgoto[] =$/;"	v	file:
+yyr1	bison/calc.c	/^static const yytype_int8 yyr1[] =$/;"	v	file:
+yyr1	bison/rpcalc.c	/^static const yytype_int8 yyr1[] =$/;"	v	file:
+yyr2	bison/calc.c	/^static const yytype_int8 yyr2[] =$/;"	v	file:
+yyr2	bison/rpcalc.c	/^static const yytype_int8 yyr2[] =$/;"	v	file:
+yyresult	bison/calc.c	/^  int yyresult;$/;"	l
+yyresult	bison/rpcalc.c	/^  int yyresult;$/;"	l
+yyrline	bison/calc.c	/^static const yytype_int8 yyrline[] =$/;"	v	file:
+yyrline	bison/rpcalc.c	/^static const yytype_int8 yyrline[] =$/;"	v	file:
+yys	bison/calc.c	/^  const char *yys = yysrc;$/;"	l
+yysize	bison/calc.c	/^  YYPTRDIFF_T yysize = 0;$/;"	l
+yysize1	bison/calc.c	/^        YYPTRDIFF_T yysize1$/;"	l
+yyss	bison/calc.c	/^    yy_state_t *yyss = yyssa;$/;"	l
+yyss	bison/rpcalc.c	/^    yy_state_t *yyss = yyssa;$/;"	l
+yyss_alloc	bison/calc.c	/^  yy_state_t yyss_alloc;$/;"	m	union:yyalloc	file:
+yyss_alloc	bison/rpcalc.c	/^  yy_state_t yyss_alloc;$/;"	m	union:yyalloc	file:
+yyssa	bison/calc.c	/^    yy_state_t yyssa[YYINITDEPTH];$/;"	l
+yyssa	bison/rpcalc.c	/^    yy_state_t yyssa[YYINITDEPTH];$/;"	l
+yyssp	bison/calc.c	/^    yy_state_t *yyssp = yyss;$/;"	l
+yyssp	bison/calc.c	/^  *yyssp = YY_CAST (yy_state_t, yystate);$/;"	l
+yyssp	bison/calc.c	/^  yy_state_t *yyssp;$/;"	m	struct:__anon3	file:
+yyssp	bison/rpcalc.c	/^    yy_state_t *yyssp = yyss;$/;"	l
+yyssp	bison/rpcalc.c	/^  *yyssp = YY_CAST (yy_state_t, yystate);$/;"	l
+yystacksize	bison/calc.c	/^    YYPTRDIFF_T yystacksize = YYINITDEPTH;$/;"	l
+yystacksize	bison/rpcalc.c	/^    YYPTRDIFF_T yystacksize = YYINITDEPTH;$/;"	l
+yystate	bison/calc.c	/^    yy_state_fast_t yystate = 0;$/;"	l
+yystate	bison/rpcalc.c	/^    yy_state_fast_t yystate = 0;$/;"	l
+yystos	bison/calc.c	/^static const yytype_int8 yystos[] =$/;"	v	file:
+yystos	bison/rpcalc.c	/^static const yytype_int8 yystos[] =$/;"	v	file:
+yystpcpy	bison/calc.c	/^yystpcpy (char *yydest, const char *yysrc)$/;"	f	file:
+yystpcpy	bison/calc.c	904;"	d	file:
+yystrlen	bison/calc.c	/^yystrlen (const char *yystr)$/;"	f	file:
+yystrlen	bison/calc.c	888;"	d	file:
+yysymbol_kind_t	bison/calc.c	/^enum yysymbol_kind_t$/;"	g	file:
+yysymbol_kind_t	bison/calc.c	/^typedef enum yysymbol_kind_t yysymbol_kind_t;$/;"	t	typeref:enum:yysymbol_kind_t	file:
+yysymbol_kind_t	bison/rpcalc.c	/^enum yysymbol_kind_t$/;"	g	file:
+yysymbol_kind_t	bison/rpcalc.c	/^typedef enum yysymbol_kind_t yysymbol_kind_t;$/;"	t	typeref:enum:yysymbol_kind_t	file:
+yysymbol_name	bison/calc.c	/^yysymbol_name (yysymbol_kind_t yysymbol)$/;"	f	file:
+yysymbol_name	bison/rpcalc.c	/^yysymbol_name (yysymbol_kind_t yysymbol)$/;"	f	file:
+yysyntax_error	bison/calc.c	/^yysyntax_error (YYPTRDIFF_T *yymsg_alloc, char **yymsg,$/;"	f	file:
+yysyntax_error_status	bison/calc.c	/^        int yysyntax_error_status;$/;"	l
+yytable	bison/calc.c	/^static const yytype_int8 yytable[] =$/;"	v	file:
+yytable	bison/rpcalc.c	/^static const yytype_int8 yytable[] =$/;"	v	file:
+yytable_value_is_error	bison/calc.c	552;"	d	file:
+yytable_value_is_error	bison/rpcalc.c	549;"	d	file:
+yytname	bison/rpcalc.c	/^static const char *const yytname[] =$/;"	v	file:
+yytoken	bison/calc.c	/^  yysymbol_kind_t yytoken = YYSYMBOL_YYEMPTY;$/;"	l
+yytoken	bison/calc.c	/^  yysymbol_kind_t yytoken;$/;"	m	struct:__anon3	file:
+yytoken	bison/rpcalc.c	/^  yysymbol_kind_t yytoken = YYSYMBOL_YYEMPTY;$/;"	l
+yytranslate	bison/calc.c	/^static const yytype_int8 yytranslate[] =$/;"	v	file:
+yytranslate	bison/rpcalc.c	/^static const yytype_int8 yytranslate[] =$/;"	v	file:
+yytype_int16	bison/calc.c	/^typedef __INT_LEAST16_TYPE__ yytype_int16;$/;"	t	file:
+yytype_int16	bison/calc.c	/^typedef int_least16_t yytype_int16;$/;"	t	file:
+yytype_int16	bison/calc.c	/^typedef short yytype_int16;$/;"	t	file:
+yytype_int16	bison/rpcalc.c	/^typedef __INT_LEAST16_TYPE__ yytype_int16;$/;"	t	file:
+yytype_int16	bison/rpcalc.c	/^typedef int_least16_t yytype_int16;$/;"	t	file:
+yytype_int16	bison/rpcalc.c	/^typedef short yytype_int16;$/;"	t	file:
+yytype_int8	bison/calc.c	/^typedef __INT_LEAST8_TYPE__ yytype_int8;$/;"	t	file:
+yytype_int8	bison/calc.c	/^typedef int_least8_t yytype_int8;$/;"	t	file:
+yytype_int8	bison/calc.c	/^typedef signed char yytype_int8;$/;"	t	file:
+yytype_int8	bison/rpcalc.c	/^typedef __INT_LEAST8_TYPE__ yytype_int8;$/;"	t	file:
+yytype_int8	bison/rpcalc.c	/^typedef int_least8_t yytype_int8;$/;"	t	file:
+yytype_int8	bison/rpcalc.c	/^typedef signed char yytype_int8;$/;"	t	file:
+yytype_uint16	bison/calc.c	/^typedef __UINT_LEAST16_TYPE__ yytype_uint16;$/;"	t	file:
+yytype_uint16	bison/calc.c	/^typedef int yytype_uint16;$/;"	t	file:
+yytype_uint16	bison/calc.c	/^typedef uint_least16_t yytype_uint16;$/;"	t	file:
+yytype_uint16	bison/calc.c	/^typedef unsigned short yytype_uint16;$/;"	t	file:
+yytype_uint16	bison/rpcalc.c	/^typedef __UINT_LEAST16_TYPE__ yytype_uint16;$/;"	t	file:
+yytype_uint16	bison/rpcalc.c	/^typedef int yytype_uint16;$/;"	t	file:
+yytype_uint16	bison/rpcalc.c	/^typedef uint_least16_t yytype_uint16;$/;"	t	file:
+yytype_uint16	bison/rpcalc.c	/^typedef unsigned short yytype_uint16;$/;"	t	file:
+yytype_uint8	bison/calc.c	/^typedef __UINT_LEAST8_TYPE__ yytype_uint8;$/;"	t	file:
+yytype_uint8	bison/calc.c	/^typedef short yytype_uint8;$/;"	t	file:
+yytype_uint8	bison/calc.c	/^typedef uint_least8_t yytype_uint8;$/;"	t	file:
+yytype_uint8	bison/calc.c	/^typedef unsigned char yytype_uint8;$/;"	t	file:
+yytype_uint8	bison/rpcalc.c	/^typedef __UINT_LEAST8_TYPE__ yytype_uint8;$/;"	t	file:
+yytype_uint8	bison/rpcalc.c	/^typedef short yytype_uint8;$/;"	t	file:
+yytype_uint8	bison/rpcalc.c	/^typedef uint_least8_t yytype_uint8;$/;"	t	file:
+yytype_uint8	bison/rpcalc.c	/^typedef unsigned char yytype_uint8;$/;"	t	file:
+yyval	bison/calc.c	/^  YYSTYPE yyval;$/;"	l
+yyval	bison/rpcalc.c	/^  YYSTYPE yyval;$/;"	l
+yyvs	bison/calc.c	/^    YYSTYPE *yyvs = yyvsa;$/;"	l
+yyvs	bison/rpcalc.c	/^    YYSTYPE *yyvs = yyvsa;$/;"	l
+yyvs_alloc	bison/calc.c	/^  YYSTYPE yyvs_alloc;$/;"	m	union:yyalloc	file:
+yyvs_alloc	bison/rpcalc.c	/^  YYSTYPE yyvs_alloc;$/;"	m	union:yyalloc	file:
+yyvsa	bison/calc.c	/^    YYSTYPE yyvsa[YYINITDEPTH];$/;"	l
+yyvsa	bison/rpcalc.c	/^    YYSTYPE yyvsa[YYINITDEPTH];$/;"	l
+yyvsp	bison/calc.c	/^    YYSTYPE *yyvsp = yyvs;$/;"	l
+yyvsp	bison/calc.c	/^  *++yyvsp = yylval;$/;"	l
+yyvsp	bison/rpcalc.c	/^    YYSTYPE *yyvsp = yyvs;$/;"	l
+yyvsp	bison/rpcalc.c	/^  *++yyvsp = yylval;$/;"	l
+yyx	bison/calc.c	/^      int yyx;$/;"	l
+yyxbegin	bison/calc.c	/^      int yyxbegin = yyn < 0 ? -yyn : 0;$/;"	l
+yyxend	bison/calc.c	/^      int yyxend = yychecklim < YYNTOKENS ? yychecklim : YYNTOKENS;$/;"	l

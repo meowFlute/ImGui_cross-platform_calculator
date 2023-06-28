@@ -1,6 +1,30 @@
 [
  {
-  "directory": "/home/scott/ImGui_ubuntu_calculator",
+  "directory": "/home/scott/ImGui_cross-platform_calculator",
+  "arguments": [
+   "cc",
+   "-c",
+   "-o",
+   "build/calc.o",
+   "bison/calc.c",
+   "-lm"
+  ],
+  "file": "bison/calc.c"
+ },
+ {
+  "directory": "/home/scott/ImGui_cross-platform_calculator",
+  "arguments": [
+   "cc",
+   "-c",
+   "-o",
+   "build/rpcalc.o",
+   "bison/rpcalc.c",
+   "-lm"
+  ],
+  "file": "bison/rpcalc.c"
+ },
+ {
+  "directory": "/home/scott/ImGui_cross-platform_calculator",
   "arguments": [
    "g++",
    "-std=c++11",
@@ -19,7 +43,7 @@
   "file": "imgui_example.cpp"
  },
  {
-  "directory": "/home/scott/ImGui_ubuntu_calculator",
+  "directory": "/home/scott/ImGui_cross-platform_calculator",
   "arguments": [
    "g++",
    "-std=c++11",
@@ -38,7 +62,7 @@
   "file": "imgui/imgui.cpp"
  },
  {
-  "directory": "/home/scott/ImGui_ubuntu_calculator",
+  "directory": "/home/scott/ImGui_cross-platform_calculator",
   "arguments": [
    "g++",
    "-std=c++11",
@@ -57,7 +81,7 @@
   "file": "imgui/imgui_demo.cpp"
  },
  {
-  "directory": "/home/scott/ImGui_ubuntu_calculator",
+  "directory": "/home/scott/ImGui_cross-platform_calculator",
   "arguments": [
    "g++",
    "-std=c++11",
@@ -76,7 +100,7 @@
   "file": "imgui/imgui_draw.cpp"
  },
  {
-  "directory": "/home/scott/ImGui_ubuntu_calculator",
+  "directory": "/home/scott/ImGui_cross-platform_calculator",
   "arguments": [
    "g++",
    "-std=c++11",
@@ -95,7 +119,7 @@
   "file": "imgui/imgui_tables.cpp"
  },
  {
-  "directory": "/home/scott/ImGui_ubuntu_calculator",
+  "directory": "/home/scott/ImGui_cross-platform_calculator",
   "arguments": [
    "g++",
    "-std=c++11",
@@ -114,7 +138,7 @@
   "file": "imgui/imgui_widgets.cpp"
  },
  {
-  "directory": "/home/scott/ImGui_ubuntu_calculator",
+  "directory": "/home/scott/ImGui_cross-platform_calculator",
   "arguments": [
    "g++",
    "-std=c++11",
@@ -133,7 +157,7 @@
   "file": "imgui/backends/imgui_impl_sdl2.cpp"
  },
  {
-  "directory": "/home/scott/ImGui_ubuntu_calculator",
+  "directory": "/home/scott/ImGui_cross-platform_calculator",
   "arguments": [
    "g++",
    "-std=c++11",

@@ -15,16 +15,20 @@
 #CXX = clang++
 
 EXE = ImGui_cross-platform_calculator
+BISON = bison
 IMGUI_DIR = imgui
 BUILD_DIR = build
+BISON_DIR = bison
 SOURCES = imgui_example.cpp
 SOURCES += $(IMGUI_DIR)/imgui.cpp $(IMGUI_DIR)/imgui_demo.cpp $(IMGUI_DIR)/imgui_draw.cpp $(IMGUI_DIR)/imgui_tables.cpp $(IMGUI_DIR)/imgui_widgets.cpp
 SOURCES += $(IMGUI_DIR)/backends/imgui_impl_sdl2.cpp $(IMGUI_DIR)/backends/imgui_impl_opengl3.cpp
+SOURCES += $(BISON_DIR)/rpcalc.c $(BISON_DIR)/calc.c
 OBJS = $(addprefix $(BUILD_DIR)/, $(addsuffix .o, $(basename $(notdir $(SOURCES)))))
 UNAME_S := $(shell uname -s)
 LINUX_GL_LIBS = -lGL
 
 CXXFLAGS = -std=c++11 -I$(IMGUI_DIR) -I$(IMGUI_DIR)/backends
+BISONFLAGS = --header
 CXXFLAGS += -g -Wall -Wformat
 LIBS =
 
@@ -73,7 +77,13 @@ endif
 ## BUILD RULES
 ##---------------------------------------------------------------------
 
-$(BUILD_DIR)/%.o:%.cpp
+$(BISON_DIR)/%.c:%.y
+	$(BISON) $(BISONFLAGS) -o $@ $<
+
+$(BUILD_DIR)/%.o:$(BISON_DIR)/%.c
+	$(CC) -c -o $@ $< -lm
+
+$(BUILD_DIR)/%.o:%.cpp $(BUILD_DIR)/calc.o $(BUILD_DIR)/rpcalc.o
 	$(CXX) $(CXXFLAGS) -c -o $@ $<
 
 $(BUILD_DIR)/%.o:$(IMGUI_DIR)/%.cpp
@@ -82,18 +92,29 @@ $(BUILD_DIR)/%.o:$(IMGUI_DIR)/%.cpp
 $(BUILD_DIR)/%.o:$(IMGUI_DIR)/backends/%.cpp
 	$(CXX) $(CXXFLAGS) -c -o $@ $<
 
-all: folders $(EXE)
-	@echo Executable $(EXE) created
+all: folders $(EXE) postbuild
+	@echo "Executable $(EXE) created"
 	@echo Build complete for $(ECHO_MESSAGE)
 	
 folders:
-	@echo Creating folder \"$(BUILD_DIR)\" to keep things tidy
+	@echo "Creating folder \"$(BUILD_DIR)\" to keep things tidy"
 	@mkdir -p $(BUILD_DIR)
+	@echo "Creating bison source folder \"$(BISON_DIR)\""
+	@mkdir -p $(BISON_DIR)
+
+postbuild:
+	@echo "Updating ctags and compilation database"
+	compiledb -n make
+	ctags
 
 $(EXE): $(OBJS)
 	$(CXX) -o $@ $^ $(CXXFLAGS) $(LIBS)
 
+.PRECIOUS: $(BISON_DIR)/rpcalc.c $(BISON_DIR)/calc.c
+.PHONY: clean
+
 clean:
 	rm -f $(EXE) $(OBJS)
 	@echo Removing the folder \"$(BUILD_DIR)\" 
-	rmdir $(BUILD_DIR)
+	rm -rf $(BUILD_DIR)
+	rm -rf $(BISON_DIR)

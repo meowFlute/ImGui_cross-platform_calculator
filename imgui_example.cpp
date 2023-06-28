@@ -14,6 +14,12 @@
 #include <SDL_opengl.h>
 #endif
 
+/* calculator parser header files generated during compilation */
+extern "C" {
+#include "bison/calc.h"
+#include "bison/rpcalc.h"
+}
+
 // This example can also compile and run with Emscripten! See 'Makefile.emscripten' for details.
 #ifdef __EMSCRIPTEN__
 #include "../libs/emscripten/emscripten_mainloop_stub.h"
@@ -159,11 +165,52 @@ static int append_char(char * buf, char c)
 
 static void ExecCommand(char * calcBuf, char * ansBuf, bool isPolish)
 {
-	// simple history
-	// TODO: clean up whitespace and standardize/display interpreted formatted input instead of just copying it over
-	strcpy(ansBuf, calcBuf);
+	/* open a read stream to the buffer in memory */
+	FILE * parse_stream_in = fmemopen(calcBuf, strlen(calcBuf), "r");
+	//printf("opened parse stream in\n\tcalcBuf: %s\n\tstrlen(calcBuf): %d\n\tFILE *: %p\n",calcBuf, (int)strlen(calcBuf), parse_stream_in);
+
+	/* open a stream to a char* to capture outputs and errors */
+	char * output;
+	size_t size;
+	FILE * parse_stream_out = open_memstream(&output, &size);
+	//int stat = fprintf(parse_stream_out, "testing, testing, 123");
+	//fclose(parse_stream_out);
+	//if(stat == -1)
+	//{
+	//	printf("fprintf error\n");
+	//}
+	//parse_stream_out = open_memstream(&output, &size);
+	//printf("opened parse stream out\n\toutput: %s\n\tsize: %d\n\tFILE *: %p\n",output, (int)size, parse_stream_out);
+
+	/* parser status (success = 0, fail = 1) */
+	int parser_status = 0;
+
+	/* the bison parsers rpcalc.y and calc.y define the calculator behavior */
+	if(isPolish)
+	{
+		//printf("starting polish parser\n");
+		parser_status = rpcalcyyparse(parse_stream_in, parse_stream_out);	
+	}
+	else // !isPolish
+	{
+		//calcyydebug = 1;
+		//printf("starting infix parser\n");
+		//if(calcyydebug)
+			//printf("Running with calcyydebug=1 (full parser debug diagnostics)\n");
+		parser_status = calcyyparse(parse_stream_in, parse_stream_out);
+	}
 	
-	// Make a tree of the operators and operands based on polish or not just like in the object-oriented C book
+	fclose(parse_stream_in);
+	fclose(parse_stream_out);
+
+	//printf("parsing complete. returned status: %d\n", parser_status);
+	if(parser_status != 0)
+	{
+		fprintf(stderr, "PARSER ERROR: %s\n", output);
+	}
+
+	//printf("copying output: '%s' to ansBuf", output);
+	strcpy(ansBuf, output);
 }
 
 // Main code
@@ -314,17 +361,15 @@ int main(int, char**)
             // Enter returns true allows you to easily act on it like this
             if(ImGui::InputText("##CalculatorOutput", calcBuf, CALC_BUFFER_SIZE, input_text_flags, CalculatorOutputCallback))
             {
-				char* s = calcBuf;
-		        TrimTrailingWhitespace(s); //trim trailing whitespace
-		        if (s[0]) //if not null
-		            ExecCommand(s, calcAnswer, reverse_polish); //do something
-		        strcpy(s, "");
-		        reclaim_focus = true;
-			}
-			// Auto-focus on window apparition
-		    ImGui::SetItemDefaultFocus();
-		    if (reclaim_focus)
-		        ImGui::SetKeyboardFocusHere(-1); // Auto focus previous widget
+                append_char(calcBuf,'\n');
+		ExecCommand(calcBuf, calcAnswer, reverse_polish); //do something
+		strcpy(calcBuf, "");
+	        reclaim_focus = true;
+            }
+	    // Auto-focus on window apparition
+	    ImGui::SetItemDefaultFocus();
+	    if (reclaim_focus)
+	        ImGui::SetKeyboardFocusHere(-1); // Auto focus previous widget
 		
             float calc_width = ImGui::GetItemRectSize().x;
             ImGui::PopItemWidth();
@@ -376,11 +421,9 @@ int main(int, char**)
 
             if (ImGui::Button("Calculate"))
             {
-            	char* s = calcBuf;
-		        TrimTrailingWhitespace(s); //trim trailing whitespace
-		        if (s[0]) //if not null
-		            ExecCommand(s, calcAnswer, reverse_polish); //do something
-		        strcpy(s, "");
+                append_char(calcBuf,'\n');
+		ExecCommand(calcBuf, calcAnswer, reverse_polish); //do something
+		strcpy(calcBuf, "");
             }
             ImGui::End();
         }
