@@ -210,7 +210,9 @@ static void ExecCommand(char * calcBuf, char * ansBuf, bool isPolish)
 	}
 
 	//printf("copying output: '%s' to ansBuf", output);
-	strcpy(ansBuf, output);
+	strcpy(ansBuf, calcBuf);
+        strcat(ansBuf, " = ");
+        strcat(ansBuf, output);
 }
 
 // Main code
